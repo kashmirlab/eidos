@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashmir Lab — Logo System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kl-paper: #faf8f5;
+            --kl-fiber: #f0ebe3;
+            --kl-cashmere: #d4c4ae;
+            --kl-camel: #a89070;
+            --kl-earth: #5c5044;
+            --kl-ink: #2d2a26;
+            --kl-deep: #1a1815;
+            
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 16px;
+            --space-4: 24px;
+            --space-5: 32px;
+            --space-6: 48px;
+            --space-7: 64px;
+            --space-8: 80px;
+            
+            --radius-sm: 2px;
+            --radius-md: 3px;
+            --radius-lg: 6px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            
+            --transition-fast: 120ms ease-out;
+            --transition-normal: 200ms ease-out;
+            --transition-slow: 300ms ease-out;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Instrument Sans', system-ui, sans-serif;
+            background: var(--kl-paper);
+            color: var(--kl-ink);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           COVER
+           ═══════════════════════════════════════════════════════════ */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: var(--space-6);
+        }
+        
+        .cover .corner-tl,
+        .cover .corner-br {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .cover .corner-tl {
+            top: var(--space-7);
+            left: var(--space-7);
+            border-top: 2.5px solid var(--kl-camel);
+            border-left: 2.5px solid var(--kl-camel);
+        }
+        
+        .cover .corner-br {
+            bottom: var(--space-7);
+            right: var(--space-7);
+            border-bottom: 2.5px solid var(--kl-camel);
+            border-right: 2.5px solid var(--kl-camel);
+        }
+        
+        .cover .weave-square {
+            position: absolute;
+            top: var(--space-7);
+            right: var(--space-7);
+            width: 48px;
+            height: 48px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                var(--kl-cashmere) 0px,
+                var(--kl-cashmere) 1px,
+                transparent 1px,
+                transparent 5px
+            );
+            opacity: 0.5;
+        }
+        
+        .cover-eyebrow {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-4);
+        }
+        
+        .cover-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 300;
+            color: var(--kl-deep);
+            line-height: 1.1;
+            margin-bottom: var(--space-2);
+        }
+        
+        .cover-subtitle {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-style: italic;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-6);
+        }
+        
+        .cover-divider {
+            width: 48px;
+            height: 2px;
+            background: var(--kl-cashmere);
+            margin: 0 auto var(--space-5);
+        }
+        
+        .cover-meta {
+            font-size: 13px;
+            color: var(--kl-earth);
+            margin-bottom: var(--space-7);
+        }
+        
+        .cover-meta span {
+            color: var(--kl-camel);
+        }
+        
+        .cover .circle-k {
+            position: absolute;
+            bottom: var(--space-7);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--kl-camel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--kl-earth);
+        }
+        
+        .cover-scroll {
+            position: absolute;
+            bottom: calc(var(--space-7) + 70px);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--kl-camel);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .cover-scroll::after {
+            content: '↓';
+            font-size: 16px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           NAV
+           ═══════════════════════════════════════════════════════════ */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.95);
+            border-bottom: 1px solid var(--kl-fiber);
+            padding: var(--space-3) var(--space-5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(8px);
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .nav-k {
+            width: 28px;
+            height: 28px;
+            border: 1.5px solid var(--kl-camel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 0.85rem;
+            color: var(--kl-earth);
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            color: var(--kl-deep);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-4);
+        }
+        
+        .nav-link {
+            font-size: 12px;
+            color: var(--kl-earth);
+            text-decoration: none;
+            padding: var(--space-1) 0;
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-fast);
+        }
+        
+        .nav-link:hover {
+            color: var(--kl-camel);
+            border-bottom-color: var(--kl-camel);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           MAIN CONTENT
+           ═══════════════════════════════════════════════════════════ */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-6);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           SECTION
+           ═══════════════════════════════════════════════════════════ */
+        .section {
+            margin-bottom: var(--space-8);
+            scroll-margin-top: 80px;
+        }
+        
+        .section-header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--space-4);
+            align-items: end;
+            margin-bottom: var(--space-5);
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid var(--kl-fiber);
+        }
+        
+        .section-intro {
+            max-width: 600px;
+        }
+        
+        .section-eyebrow {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 300;
+            color: var(--kl-deep);
+            line-height: 1.2;
+            margin-bottom: var(--space-2);
+        }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--kl-earth);
+            line-height: 1.6;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           CONTROLS
+           ═══════════════════════════════════════════════════════════ */
+        .controls {
+            display: flex;
+            gap: var(--space-2);
+            background: var(--kl-fiber);
+            padding: var(--space-1);
+            border-radius: var(--radius-md);
+        }
+        
+        .control-btn {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            padding: var(--space-2) var(--space-3);
+            border: none;
+            background: transparent;
+            color: var(--kl-earth);
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .control-btn:hover {
+            background: rgba(255,255,255,0.5);
+        }
+        
+        .control-btn.active {
+            background: white;
+            color: var(--kl-deep);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           LOGO SHOWCASE
+           ═══════════════════════════════════════════════════════════ */
+        .showcase {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-4);
+        }
+        
+        .showcase-item {
+            position: relative;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--kl-fiber);
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+        
+        .showcase-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .showcase-item:active {
+            transform: translateY(0);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .showcase-preview {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-5);
+            position: relative;
+            transition: background var(--transition-normal);
+        }
+        
+        .showcase-preview img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            transition: transform var(--transition-normal);
+            pointer-events: none;
+        }
+        
+        .showcase-item:hover .showcase-preview img {
+            transform: scale(1.05);
+        }
+        
+        /* Download indicator */
+        .showcase-download {
+            position: absolute;
+            bottom: var(--space-2);
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--kl-camel);
+            opacity: 0;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .showcase-download::before {
+            content: '↓';
+            font-size: 11px;
+        }
+        
+        .showcase-item:hover .showcase-download {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        [data-bg="dark"] .showcase-download {
+            color: var(--kl-cashmere);
+        }
+        
+        /* Background variants */
+        .showcase-preview[data-bg="paper"] { background: var(--kl-paper); }
+        .showcase-preview[data-bg="fiber"] { background: var(--kl-fiber); }
+        .showcase-preview[data-bg="dark"] { background: var(--kl-deep); }
+        .showcase-preview[data-bg="checker"] {
+            background-color: #fff;
+            background-image: 
+                linear-gradient(45deg, #e8e8e8 25%, transparent 25%), 
+                linear-gradient(-45deg, #e8e8e8 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #e8e8e8 75%), 
+                linear-gradient(-45deg, transparent 75%, #e8e8e8 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+        }
+        
+        .showcase-badge {
+            position: absolute;
+            top: var(--space-2);
+            right: var(--space-2);
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            padding: 3px 6px;
+            border-radius: var(--radius-sm);
+            background: rgba(255,255,255,0.9);
+            color: var(--kl-camel);
+            backdrop-filter: blur(4px);
+        }
+        
+        [data-bg="dark"] .showcase-badge {
+            background: rgba(0,0,0,0.5);
+            color: var(--kl-cashmere);
+        }
+        
+        .showcase-info {
+            padding: var(--space-3);
+            border-top: 1px solid var(--kl-fiber);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .showcase-name {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--kl-earth);
+        }
+        
+        .showcase-format {
+            display: flex;
+            gap: var(--space-1);
+        }
+        
+        .format-tag {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 2px 5px;
+            border-radius: var(--radius-sm);
+            background: var(--kl-fiber);
+            color: var(--kl-camel);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           VARIANT ROW
+           ═══════════════════════════════════════════════════════════ */
+        .variant-section {
+            margin-bottom: var(--space-6);
+        }
+        
+        .variant-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+        
+        .variant-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--kl-earth);
+        }
+        
+        .variant-line {
+            flex: 1;
+            height: 1px;
+            background: var(--kl-fiber);
+        }
+        
+        .variant-count {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--kl-camel);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           PALETTE PREVIEW
+           ═══════════════════════════════════════════════════════════ */
+        .palette-strip {
+            display: flex;
+            margin-bottom: var(--space-6);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .palette-color {
+            flex: 1;
+            padding: var(--space-4) var(--space-3);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+        
+        .palette-color:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        
+        .palette-color:active {
+            transform: scale(0.98);
+        }
+        
+        .palette-color .name {
+            font-family: 'Fraunces', serif;
+            font-size: 11px;
+            margin-bottom: 6px;
+            display: block;
+        }
+        
+        .palette-color .hex {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            opacity: 0.8;
+            display: block;
+        }
+        
+        .palette-color .copied {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: inherit;
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 11px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .palette-color.show-copied .copied {
+            opacity: 1;
+        }
+        
+        .palette-color.paper { background: var(--kl-paper); color: var(--kl-earth); }
+        .palette-color.fiber { background: var(--kl-fiber); color: var(--kl-earth); }
+        .palette-color.cashmere { background: var(--kl-cashmere); color: var(--kl-earth); }
+        .palette-color.camel { background: var(--kl-camel); color: white; }
+        .palette-color.earth { background: var(--kl-earth); color: white; }
+        .palette-color.deep { background: var(--kl-deep); color: var(--kl-cashmere); }
+        
+        /* ═══════════════════════════════════════════════════════════
+           SIZE COMPARISON
+           ═══════════════════════════════════════════════════════════ */
+        .size-compare {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: var(--space-6);
+            padding: var(--space-6);
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--kl-fiber);
+            margin-bottom: var(--space-6);
+        }
+        
+        .size-item {
+            text-align: center;
+        }
+        
+        .size-item img {
+            display: block;
+            margin: 0 auto var(--space-3);
+        }
+        
+        .size-label {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--kl-camel);
+            margin-bottom: 2px;
+        }
+        
+        .size-value {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            color: var(--kl-earth);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════════════════════ */
+        .footer {
+            text-align: center;
+            padding: var(--space-8) var(--space-6);
+            border-top: 1px solid var(--kl-fiber);
+            position: relative;
+        }
+        
+        .footer .corner-tl {
+            position: absolute;
+            top: var(--space-6);
+            left: var(--space-6);
+            width: 24px;
+            height: 24px;
+            border-top: 2px solid var(--kl-camel);
+            border-left: 2px solid var(--kl-camel);
+        }
+        
+        .footer-k {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--kl-camel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            color: var(--kl-earth);
+            margin: 0 auto var(--space-4);
+        }
+        
+        .footer-tagline {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .footer-meta {
+            font-size: 12px;
+            color: var(--kl-earth);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           DIVIDER
+           ═══════════════════════════════════════════════════════════ */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+        
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: var(--kl-cashmere);
+        }
+        
+        .divider-k {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid var(--kl-cashmere);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            color: var(--kl-cashmere);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           TOAST NOTIFICATION
+           ═══════════════════════════════════════════════════════════ */
+        .toast {
+            position: fixed;
+            bottom: var(--space-5);
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--kl-deep);
+            color: var(--kl-paper);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-md);
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 13px;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transition: all var(--transition-normal);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        .toast::before {
+            content: '✓';
+            width: 18px;
+            height: 18px;
+            background: var(--kl-camel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════════════════════ */
+        @media (max-width: 1200px) {
+            .showcase { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (max-width: 900px) {
+            .showcase { grid-template-columns: repeat(3, 1fr); }
+            .section-header { grid-template-columns: 1fr; gap: var(--space-3); }
+        }
+        
+        @media (max-width: 600px) {
+            .cover .corner-tl, .cover .corner-br, 
+            .cover .weave-square, .footer .corner-tl { display: none; }
+            .main { padding: var(--space-5) var(--space-4); }
+            .showcase { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+            .nav-links { display: none; }
+            .palette-strip { flex-wrap: wrap; }
+            .palette-color { flex: 1 1 33%; }
+            .size-compare { flex-wrap: wrap; gap: var(--space-4); }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER -->
+    <section class="cover">
+        <div class="corner-tl"></div>
+        <div class="corner-br"></div>
+        <div class="weave-square"></div>
+        
+        <p class="cover-eyebrow">Brand Assets</p>
+        <h1 class="cover-title">Kashmir Lab</h1>
+        <p class="cover-subtitle">Logo System</p>
+        <div class="cover-divider"></div>
+        <p class="cover-meta"><span>81 SVG</span> · <span>81 PNG</span> · <span>3 taglie</span></p>
+        
+        <div class="cover-scroll">Scorri</div>
+        <div class="circle-k">K</div>
+    </section>
+    
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <div class="nav-k">K</div>
+            <span class="nav-title">Logo System</span>
+        </div>
+        <div class="nav-links">
+            <a href="#circle-k" class="nav-link">Circle K</a>
+            <a href="#logo-compact" class="nav-link">Compact</a>
+            <a href="#logo-full" class="nav-link">Full</a>
+            <a href="#wordmark" class="nav-link">Wordmark</a>
+        </div>
+    </nav>
+    
+    <!-- MAIN -->
+    <main class="main">
+        
+        <!-- Palette Reference -->
+        <div class="palette-strip">
+            <div class="palette-color paper" data-color="#FAF8F5"><span class="name">Paper</span><span class="hex">#FAF8F5</span><span class="copied">Copiato!</span></div>
+            <div class="palette-color fiber" data-color="#F0EBE3"><span class="name">Fiber</span><span class="hex">#F0EBE3</span><span class="copied">Copiato!</span></div>
+            <div class="palette-color cashmere" data-color="#D4C4AE"><span class="name">Cashmere</span><span class="hex">#D4C4AE</span><span class="copied">Copiato!</span></div>
+            <div class="palette-color camel" data-color="#A89070"><span class="name">Camel</span><span class="hex">#A89070</span><span class="copied">Copiato!</span></div>
+            <div class="palette-color earth" data-color="#5C5044"><span class="name">Earth</span><span class="hex">#5C5044</span><span class="copied">Copiato!</span></div>
+            <div class="palette-color deep" data-color="#1A1815"><span class="name">Deep</span><span class="hex">#1A1815</span><span class="copied">Copiato!</span></div>
+        </div>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             CIRCLE K
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="section" id="circle-k">
+            <div class="section-header">
+                <div class="section-intro">
+                    <p class="section-eyebrow">01 — Il Timbro</p>
+                    <h2 class="section-title">Circle K</h2>
+                    <p class="section-desc">La firma artigianale. Il cerchio con sfondo riempito funziona come un sigillo su qualsiasi superficie. Trasparenza esterna, solidità interna.</p>
+                </div>
+                <div class="controls" id="controls-circlek">
+                    <button class="control-btn active" data-bg="checker">◫</button>
+                    <button class="control-btn" data-bg="paper">Paper</button>
+                    <button class="control-btn" data-bg="fiber">Fiber</button>
+                    <button class="control-btn" data-bg="dark">Dark</button>
+                </div>
+            </div>
+            
+            <!-- Size comparison -->
+            <div class="size-compare">
+                <div class="size-item">
+                    <img src="svg/circle-k/kl-circle-k_sm_light.svg" alt="" style="width: 32px; height: 32px;">
+                    <div class="size-label">SM</div>
+                    <div class="size-value">32px</div>
+                </div>
+                <div class="size-item">
+                    <img src="svg/circle-k/kl-circle-k_md_light.svg" alt="" style="width: 64px; height: 64px;">
+                    <div class="size-label">MD</div>
+                    <div class="size-value">64px</div>
+                </div>
+                <div class="size-item">
+                    <img src="svg/circle-k/kl-circle-k_xl_light.svg" alt="" style="width: 128px; height: 128px;">
+                    <div class="size-label">XL</div>
+                    <div class="size-value">512px</div>
+                </div>
+            </div>
+            
+            <!-- Variants -->
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Light</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Su sfondi chiari · Fill: Paper</span>
+                </div>
+                <div class="showcase" data-section="circlek">
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">sm</span><img src="svg/circle-k/kl-circle-k_sm_light.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">sm_light</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/circle-k/kl-circle-k_md_light.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">md_light</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">xl</span><img src="svg/circle-k/kl-circle-k_xl_light.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">xl_light</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Medium</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Su sfondi neutri · Fill: Fiber</span>
+                </div>
+                <div class="showcase" data-section="circlek">
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">sm</span><img src="svg/circle-k/kl-circle-k_sm_medium.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">sm_medium</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/circle-k/kl-circle-k_md_medium.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">md_medium</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">xl</span><img src="svg/circle-k/kl-circle-k_xl_medium.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">xl_medium</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Dark</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Su sfondi scuri · Fill: Deep</span>
+                </div>
+                <div class="showcase" data-section="circlek">
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">sm</span><img src="svg/circle-k/kl-circle-k_sm_dark.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">sm_dark</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/circle-k/kl-circle-k_md_dark.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">md_dark</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">xl</span><img src="svg/circle-k/kl-circle-k_xl_dark.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">xl_dark</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Mono Black</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Stampa B/N su chiaro · Fill: White</span>
+                </div>
+                <div class="showcase" data-section="circlek">
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">sm</span><img src="svg/circle-k/kl-circle-k_sm_mono-black.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">sm_mono-black</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/circle-k/kl-circle-k_md_mono-black.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">md_mono-black</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="checker"><span class="showcase-badge">xl</span><img src="svg/circle-k/kl-circle-k_xl_mono-black.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">xl_mono-black</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Mono White</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Stampa B/N su scuro · Fill: Deep</span>
+                </div>
+                <div class="showcase" data-section="circlek">
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="dark"><span class="showcase-badge">sm</span><img src="svg/circle-k/kl-circle-k_sm_mono-white.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">sm_mono-white</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/circle-k/kl-circle-k_md_mono-white.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">md_mono-white</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-preview" data-bg="dark"><span class="showcase-badge">xl</span><img src="svg/circle-k/kl-circle-k_xl_mono-white.svg" alt=""></div>
+                        <div class="showcase-info"><span class="showcase-name">xl_mono-white</span><div class="showcase-format"><span class="format-tag">svg</span><span class="format-tag">png</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-k">K</span>
+            <span class="divider-line"></span>
+        </div>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             LOGO COMPACT
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="section" id="logo-compact">
+            <div class="section-header">
+                <div class="section-intro">
+                    <p class="section-eyebrow">02 — Secondario</p>
+                    <h2 class="section-title">Logo Compact</h2>
+                    <p class="section-desc">K + Kashmir. Per spazi ridotti dove serve identificazione ma non il nome completo.</p>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Light</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">sm</span><img src="svg/logo-compact/kl-logo-compact_sm_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">sm_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/logo-compact/kl-logo-compact_md_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">xl</span><img src="svg/logo-compact/kl-logo-compact_xl_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">xl_light</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Dark</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Testo chiaro, sfondo trasparente</span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">sm</span><img src="svg/logo-compact/kl-logo-compact_sm_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">sm_dark</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/logo-compact/kl-logo-compact_md_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">xl</span><img src="svg/logo-compact/kl-logo-compact_xl_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">xl_dark</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Con sfondo</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">light-bg, dark-bg, mono-white-bg</span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/logo-compact/kl-logo-compact_md_light-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light-bg</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/logo-compact/kl-logo-compact_md_dark-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark-bg</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/logo-compact/kl-logo-compact_md_mono-white-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_mono-white-bg</span></div></div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-k">K</span>
+            <span class="divider-line"></span>
+        </div>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             LOGO FULL
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="section" id="logo-full">
+            <div class="section-header">
+                <div class="section-intro">
+                    <p class="section-eyebrow">03 — Primario</p>
+                    <h2 class="section-title">Logo Full</h2>
+                    <p class="section-desc">K + Kashmir Lab. Prima impressione. Usa quando l'interlocutore non ci conosce ancora.</p>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Light</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">sm</span><img src="svg/logo-full/kl-logo-full_sm_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">sm_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">xl</span><img src="svg/logo-full/kl-logo-full_xl_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">xl_light</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Dark</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Testo chiaro, sfondo trasparente</span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">sm</span><img src="svg/logo-full/kl-logo-full_sm_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">sm_dark</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">xl</span><img src="svg/logo-full/kl-logo-full_xl_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">xl_dark</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Con sfondo + Mono</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_light-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light-bg</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_dark-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark-bg</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_mono-black.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_mono-black</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/logo-full/kl-logo-full_md_mono-white.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_mono-white</span></div></div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-k">K</span>
+            <span class="divider-line"></span>
+        </div>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             WORDMARK
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="section" id="wordmark">
+            <div class="section-header">
+                <div class="section-intro">
+                    <p class="section-eyebrow">04 — Solo testo</p>
+                    <h2 class="section-title">Wordmark</h2>
+                    <p class="section-desc">Kashmir Lab senza simbolo. Per contesti dove il Cerchio K è già presente altrove o per variazione.</p>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Light + Dark</span>
+                    <span class="variant-line"></span>
+                    <span class="variant-count">Trasparenti</span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_dark.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Con sfondo</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_light-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light-bg</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="checker"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_dark-bg.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_dark-bg</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Mono</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_mono-black.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_mono-black</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="dark"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_mono-white.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_mono-white</span></div></div>
+                </div>
+            </div>
+            
+            <div class="variant-section">
+                <div class="variant-header">
+                    <span class="variant-title">Tutte le taglie — Light</span>
+                    <span class="variant-line"></span>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">sm</span><img src="svg/wordmark/kl-wordmark_sm_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">sm_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">md</span><img src="svg/wordmark/kl-wordmark_md_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">md_light</span></div></div>
+                    <div class="showcase-item"><div class="showcase-preview" data-bg="paper"><span class="showcase-badge">xl</span><img src="svg/wordmark/kl-wordmark_xl_light.svg" alt=""></div><div class="showcase-info"><span class="showcase-name">xl_light</span></div></div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="corner-tl"></div>
+        <div class="footer-k">K</div>
+        <p class="footer-tagline">Anima nella tecnologia.</p>
+        <p class="footer-meta">Kashmir Lab · Logo System v2 · 2026</p>
+    </footer>
+    
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+    
+    <script>
+        // Toast notification
+        const toast = document.getElementById('toast');
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+        
+        // Background toggle for Circle K section
+        document.querySelectorAll('.controls').forEach(controls => {
+            const section = controls.closest('.section');
+            const previews = section.querySelectorAll('.showcase-preview:not([data-bg="dark"])');
+            
+            controls.querySelectorAll('.control-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    controls.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const bg = btn.dataset.bg;
+                    previews.forEach(p => p.dataset.bg = bg);
+                });
+            });
+        });
+        
+        // Smooth scroll for nav
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Color copy functionality
+        document.querySelectorAll('.palette-color').forEach(color => {
+            color.addEventListener('click', async () => {
+                const hex = color.dataset.color;
+                try {
+                    await navigator.clipboard.writeText(hex);
+                    color.classList.add('show-copied');
+                    setTimeout(() => color.classList.remove('show-copied'), 1000);
+                } catch (err) {
+                    // Fallback
+                    const ta = document.createElement('textarea');
+                    ta.value = hex;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    color.classList.add('show-copied');
+                    setTimeout(() => color.classList.remove('show-copied'), 1000);
+                }
+            });
+        });
+        
+        // Download functionality for logos
+        document.querySelectorAll('.showcase-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                if (!img) return;
+                
+                const svgPath = img.getAttribute('src');
+                const filename = svgPath.split('/').pop();
+                
+                // Create download link
+                const a = document.createElement('a');
+                a.href = svgPath;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                showToast(filename);
+            });
+        });
+        
+        // Add download indicators to all showcase items
+        document.querySelectorAll('.showcase-preview').forEach(preview => {
+            const indicator = document.createElement('span');
+            indicator.className = 'showcase-download';
+            indicator.textContent = 'SVG';
+            preview.appendChild(indicator);
+        });
+    </script>
+</body>
+</html>

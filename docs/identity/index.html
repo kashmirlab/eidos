@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kashmir Lab Brand System v2.0 — Visual and Verbal Identity Guidelines">
+    <meta name="version" content="2.0">
+    <meta name="last-updated" content="2026-02">
+    <title>Kashmir Lab — Brand System v2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!--
+    ╔═══════════════════════════════════════════════════════════════════════════════════╗
+    ║  KASHMIR LAB BRAND SYSTEM v2.0                                                    ║
+    ║  AI-READABLE CONFIGURATION                                                        ║
+    ╠═══════════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                                   ║
+    ║  FRAMEWORK: Soft Minimalism (Norm Architects + Kinfolk)                           ║
+    ║  "Richness focused by restraint, simplicity imbued with warmth."                  ║
+    ║                                                                                   ║
+    ║  STRUCTURE: Each section follows → Narrative → Specs → Rationale                  ║
+    ║                                                                                   ║
+    ║  INVARIANCE LEVELS:                                                               ║
+    ║  [SACRED]    — Never modify. Core identity.                                       ║
+    ║  [STABLE]    — Modify only with strong reason + human approval.                   ║
+    ║  [ADAPTIVE]  — Can evolve. Document changes.                                      ║
+    ║  [FLUID]     — Designed to grow. Add freely.                                      ║
+    ║                                                                                   ║
+    ║  TYPOGRAPHY SYSTEM (3 fonts, one temperature):                                    ║
+    ║  → Fraunces (display) = Richness — il carattere, l'artigiano                      ║
+    ║  → Instrument Sans (body + UI) = Warmth — il calore ovunque                       ║
+    ║  → DM Mono (code) = Restraint — il tecnico sobrio                                 ║
+    ║                                                                                   ║
+    ║  WHEN GENERATING CONTENT:                                                         ║
+    ║  → Respect exact values in "Specs" sections                                       ║
+    ║  → Use tone defined in Part III                                                   ║
+    ║  → When uncertain, choose the warmer option                                       ║
+    ║                                                                                   ║
+    ║  GUIDING PRINCIPLE: Kashmir Lab is artisanal, precise, warm.                      ║
+    ║  Everything is tiepido (warm). Never cold, never sterile.                         ║
+    ║                                                                                   ║
+    ╚═══════════════════════════════════════════════════════════════════════════════════╝
+    -->
+    
+    <style>
+        :root {
+            /* PALETTE BRAND [SACRED] */
+            --kl-paper: #faf8f5;
+            --kl-fiber: #f0ebe3;
+            --kl-cashmere: #d4c4ae;
+            --kl-camel: #a89070;
+            --kl-earth: #5c5044;
+            --kl-ink: #2d2a26;
+            --kl-deep: #1a1815;
+            
+            /* PALETTE INTERACTIVE [ADAPTIVE] — v1.1 */
+            --kl-camel-dark: #8b7355;
+            --kl-camel-hover: #6b5a45;
+            --kl-camel-disabled: #c4b8a8;
+            --kl-highlight: #f7f2e4;
+            
+            /* PALETTE FUNCTIONAL [ADAPTIVE] */
+            --kl-terracotta: #c4705a;
+            --kl-terracotta-soft: #f5e6e2;
+            --kl-ambra: #c49c4a;
+            --kl-ambra-soft: #f7f2e4;
+            --kl-salvia: #7a9070;
+            --kl-salvia-soft: #eef3ec;
+            --kl-pietra: #8a8580;
+            --kl-pietra-soft: #f2f1ef;
+            
+            /* SPACING [ADAPTIVE] — 8px base */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 16px;
+            --space-4: 24px;
+            --space-5: 32px;
+            --space-6: 48px;
+            --space-7: 64px;
+            --space-8: 80px;
+            
+            /* BORDER RADIUS [ADAPTIVE] */
+            --radius-sm: 2px;
+            --radius-md: 3px;
+            --radius-lg: 6px;
+            --radius-full: 50%;
+            
+            /* SHADOWS [ADAPTIVE] */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            
+            /* TYPOGRAPHY FLUID [ADAPTIVE] — v2.0
+               ══════════════════════════════════════════════════════
+               Scale: Minor Third (1.2 ratio)
+               Base: 0.875rem (14px)
+               
+               Progression: base × 1.2^n
+               ├── micro:      0.875 ÷ 1.2² = 0.608rem  (~10px)
+               ├── label:      0.875 ÷ 1.2  = 0.729rem  (~12px)
+               ├── small/body: 0.875 × 1    = 0.875rem  (14px) — base
+               ├── h4:         0.875 × 1.2  = 1.05rem   (~17px)
+               ├── h3:         0.875 × 1.2² = 1.26rem   (~20px)
+               ├── h2:         0.875 × 1.2³ = 1.512rem  (~24px)
+               ├── h1:         0.875 × 1.2⁴ = 1.814rem  (~29px)
+               ├── display:    0.875 × 1.2⁵ = 2.177rem  (~35px)
+               └── display-xl: 0.875 × 1.2⁶ = 2.618rem  (~42px)
+               ══════════════════════════════════════════════════════ */
+            --type-ratio: 1.2;
+            --type-base: 0.875rem;
+            --type-display-xl: clamp(2.2rem, 2rem + 1.8vw, 2.618rem);
+            --type-display: clamp(1.9rem, 1.7rem + 1.5vw, 2.177rem);
+            --type-h1: clamp(1.6rem, 1.5rem + 0.8vw, 1.814rem);
+            --type-h2: clamp(1.35rem, 1.28rem + 0.5vw, 1.512rem);
+            --type-h3: clamp(1.15rem, 1.1rem + 0.3vw, 1.26rem);
+            --type-h4: 1.05rem;
+            --type-body: var(--type-base);
+            --type-small: var(--type-base);
+            --type-label: 0.729rem;
+            --type-micro: 0.608rem;
+            
+            /* LINE HEIGHTS [ADAPTIVE] — v1.1 */
+            --lh-tight: 1.2;
+            --lh-normal: 1.6;
+            --lh-relaxed: 1.75;
+            
+            /* BORDERS [ADAPTIVE] */
+            --border-light: 1px solid var(--kl-fiber);
+            --border-medium: 1px solid var(--kl-cashmere);
+            --border-accent: 2px solid var(--kl-camel);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        @media print {
+            .page-break { page-break-after: always; }
+            body { background: white; }
+            .page { box-shadow: none; margin: 0; }
+        }
+        
+        body {
+            font-family: 'Instrument Sans', system-ui, sans-serif;
+            background: #e8e4df;
+            color: var(--kl-ink);
+            line-height: var(--lh-normal);
+            font-weight: 400;
+            font-size: var(--type-body);
+        }
+        
+        .page {
+            max-width: 900px;
+            margin: 32px auto;
+            background: var(--kl-paper);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .page-content { padding: 60px 70px; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           COVER
+           ══════════════════════════════════════════════════════════════ */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .cover .corner-tl, .cover .corner-br {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .cover .corner-tl {
+            top: 64px;
+            left: 70px;
+            border-top: 2.5px solid var(--kl-camel);
+            border-left: 2.5px solid var(--kl-camel);
+        }
+        
+        .cover .corner-br {
+            bottom: 64px;
+            right: 70px;
+            border-bottom: 2.5px solid var(--kl-camel);
+            border-right: 2.5px solid var(--kl-camel);
+        }
+        
+        .cover .weave-square {
+            position: absolute;
+            top: 64px;
+            right: 70px;
+            width: 48px;
+            height: 48px;
+            background-image: repeating-linear-gradient(45deg, var(--kl-cashmere) 0px, var(--kl-cashmere) 1px, transparent 1px, transparent 5px);
+            opacity: 0.5;
+        }
+        
+        .cover-content { max-width: 460px; }
+        
+        .cover-eyebrow {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: var(--type-label);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-4);
+        }
+        
+        .cover-title {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-display-xl);
+            font-weight: 300;
+            color: var(--kl-deep);
+            line-height: var(--lh-tight);
+            margin-bottom: var(--space-2);
+        }
+        
+        .cover-subtitle {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h2);
+            font-style: italic;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-5);
+        }
+        
+        .cover-divider {
+            width: 48px;
+            height: 2px;
+            background: var(--kl-cashmere);
+            margin: 0 auto var(--space-5);
+        }
+        
+        .cover-version {
+            font-size: var(--type-body);
+            color: var(--kl-camel);
+        }
+        
+        .cover .circle-k {
+            position: absolute;
+            bottom: 64px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h3);
+            color: var(--kl-earth);
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           SECTION PAGES
+           ══════════════════════════════════════════════════════════════ */
+        .section-page { min-height: auto; position: relative; }
+        
+        .section-page .corner-tl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            border-top: 2.5px solid var(--kl-camel);
+            border-left: 2.5px solid var(--kl-camel);
+        }
+        
+        .page-header {
+            margin-bottom: var(--space-5);
+            padding-bottom: var(--space-3);
+            border-bottom: var(--border-light);
+        }
+        
+        .page-number {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: var(--type-micro);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .page-title {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h1);
+            font-weight: 300;
+            color: var(--kl-deep);
+            line-height: var(--lh-tight);
+            margin-bottom: var(--space-1);
+        }
+        
+        .page-subtitle {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h3);
+            font-style: italic;
+            color: var(--kl-camel);
+        }
+        
+        .invariance-tag {
+            display: inline-block;
+            font-family: 'DM Mono', monospace;
+            font-size: var(--type-micro);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--kl-pietra);
+            background: var(--kl-fiber);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            margin-top: var(--space-3);
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           CONTENT ELEMENTS
+           ══════════════════════════════════════════════════════════════
+           
+           SPACING RHYTHM — v1.4
+           ────────────────────────────────────────────────────────────
+           Content-section spacing: --space-5 (32px) — breathing room
+           Divider spacing: --space-5 (32px) — same as sections
+           Internal elements: --space-3 (16px) — tight grouping
+           
+           Rule: related things close, unrelated things apart.
+           ──────────────────────────────────────────────────────────── */
+        .content-section { margin-bottom: var(--space-5); }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h2);
+            font-weight: 400;
+            color: var(--kl-earth);
+            margin-bottom: var(--space-3);
+        }
+        
+        p { margin-bottom: var(--space-3); color: #555; }
+        p:last-child { margin-bottom: 0; }
+        strong { color: var(--kl-earth); font-weight: 500; }
+        
+        .divider {
+            width: 48px;
+            height: 1.5px;
+            background: var(--kl-cashmere);
+            margin: var(--space-5) 0;
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           SPEC BOX — Technical, elegant
+           ══════════════════════════════════════════════════════════════ */
+        .spec-box {
+            background: linear-gradient(to bottom, var(--kl-fiber) 0%, #f5f2ed 100%);
+            border: 1px solid rgba(168,144,112,0.25);
+            border-radius: var(--radius-md);
+            padding: 14px 16px;
+            margin: var(--space-3) 0;
+            position: relative;
+        }
+        
+        .spec-box::before {
+            content: "spec";
+            position: absolute;
+            top: -9px;
+            left: 14px;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--kl-camel);
+            background: var(--kl-paper);
+            padding: 2px 8px;
+            border: 1px solid var(--kl-cashmere);
+            border-radius: var(--radius-sm);
+        }
+        
+        .spec-box code {
+            display: block;
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            color: var(--kl-earth);
+            line-height: 1.8;
+        }
+        
+        .spec-box code::before {
+            content: "→ ";
+            color: var(--kl-cashmere);
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           RATIONALE BOX
+           ══════════════════════════════════════════════════════════════ */
+        .rationale {
+            background: var(--kl-fiber);
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            margin: var(--space-5) 0;
+            border-left: 3px solid var(--kl-camel);
+        }
+        
+        .rationale h4 {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-small);
+            font-style: italic;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .rationale p {
+            font-size: var(--type-small);
+            color: var(--kl-earth);
+            margin-bottom: 0;
+            line-height: 1.55;
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           MISSION BOX — v2.0
+           ══════════════════════════════════════════════════════════════ */
+        .mission-box {
+            background: white;
+            border: 2px solid var(--kl-camel);
+            border-radius: var(--radius-md);
+            padding: var(--space-5) var(--space-5);
+            margin: var(--space-4) 0;
+            text-align: center;
+        }
+        
+        .mission-text {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h2);
+            font-weight: 300;
+            color: var(--kl-deep);
+            line-height: 1.5;
+            margin-bottom: var(--space-4);
+        }
+        
+        .tagline {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h3);
+            font-style: italic;
+            color: var(--kl-camel);
+            padding-top: var(--space-3);
+            border-top: 1px solid var(--kl-cashmere);
+            display: inline-block;
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           TARGET BOX — v2.0
+           ══════════════════════════════════════════════════════════════ */
+        .target-box {
+            background: var(--kl-fiber);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            margin: var(--space-3) 0;
+        }
+        
+        .target-intro {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h4);
+            color: var(--kl-earth);
+            margin-bottom: var(--space-3);
+        }
+        
+        .target-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .target-list li {
+            position: relative;
+            padding-left: var(--space-4);
+            margin-bottom: var(--space-2);
+            font-size: var(--type-body);
+            color: var(--kl-earth);
+            line-height: 1.5;
+        }
+        
+        .target-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--kl-camel);
+        }
+        
+        .target-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .target-list em {
+            font-style: italic;
+            color: var(--kl-camel);
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           BOILERPLATE — v2.0
+           ══════════════════════════════════════════════════════════════ */
+        .boilerplate-section {
+            background: white;
+            border: var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-3) var(--space-4);
+            margin-bottom: var(--space-3);
+        }
+        
+        .boilerplate-section:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        .boilerplate-label {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: var(--type-micro);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .boilerplate-text {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: var(--type-body);
+            color: var(--kl-earth);
+            line-height: 1.6;
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           AI INSTRUCTIONS BOX
+           ══════════════════════════════════════════════════════════════
+           
+           BOX HIERARCHY — v1.4
+           ────────────────────────────────────────────────────────────
+           Two archetypes only:
+           
+           1. TECHNICAL (spec-box, ai-box)
+              → Neutral background (Fiber)
+              → DM Mono for content
+              → For: specifications, instructions, code
+           
+           2. EDITORIAL (rationale)
+              → Accent border (Camel left border)
+              → Fraunces for headers
+              → For: reasoning, narrative, "why"
+           
+           ai-box is a SPECIALIZATION of technical for AI-specific
+           instructions. Same DNA, extended structure.
+           ──────────────────────────────────────────────────────────── */
+        .ai-box {
+            background: var(--kl-fiber);
+            border: 1px solid var(--kl-cashmere);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin: var(--space-5) 0;
+            position: relative;
+        }
+        
+        .ai-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--kl-camel);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: var(--space-3);
+            padding-bottom: var(--space-3);
+            border-bottom: 1px solid var(--kl-cashmere);
+        }
+        
+        .ai-box-icon {
+            width: 22px;
+            height: 22px;
+            background: var(--kl-camel);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--kl-paper);
+        }
+        
+        .ai-box-title {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-h3);
+            font-weight: 400;
+            color: var(--kl-earth);
+        }
+        
+        .ai-box-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+        
+        .ai-box-section h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--kl-camel);
+            margin-bottom: 8px;
+        }
+        
+        .ai-box-section ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .ai-box-section li {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--kl-earth);
+            line-height: 1.7;
+            padding-left: 14px;
+            position: relative;
+        }
+        
+        .ai-box-section li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: var(--kl-camel);
+        }
+        
+        .ai-box-footer {
+            margin-top: var(--space-3);
+            padding-top: var(--space-3);
+            border-top: 1px solid var(--kl-cashmere);
+            font-family: 'Fraunces', serif;
+            font-size: 12px;
+            font-style: italic;
+            color: var(--kl-camel);
+            text-align: center;
+        }
+        
+        /* ══════════════════════════════════════════════════════════════
+           TABLES — Tighter
+           ══════════════════════════════════════════════════════════════ */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-3) 0;
+            font-size: var(--type-small);
+        }
+        
+        .specs-table th {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--kl-camel);
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: var(--border-medium);
+            font-weight: 400;
+        }
+        
+        .specs-table td {
+            padding: 8px 10px;
+            border-bottom: var(--border-light);
+            color: var(--kl-earth);
+        }
+        
+        .specs-table td:first-child { font-family: 'Fraunces', serif; font-weight: 400; }
+        .specs-table tr:last-child td { border-bottom: none; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           LOGO DISPLAYS
+           ══════════════════════════════════════════════════════════════ */
+        .logo-display {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            text-align: center;
+            margin: var(--space-3) 0;
+            border: var(--border-light);
+        }
+        
+        .logo-main {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+        
+        .logo-k-large {
+            width: 72px;
+            height: 72px;
+            border: 2.5px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            color: var(--kl-earth);
+        }
+        
+        .logo-caption { color: var(--kl-camel); font-size: var(--type-small); }
+        
+        /* Logo Hierarchy */
+        .logo-hierarchy {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3);
+            margin: var(--space-3) 0;
+        }
+        
+        .logo-tier {
+            background: white;
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: var(--border-light);
+        }
+        
+        .logo-tier .tier-label {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .logo-tier .tier-visual {
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-2);
+        }
+        
+        .logo-tier .tier-name {
+            font-family: 'Fraunces', serif;
+            font-size: var(--type-small);
+            color: var(--kl-earth);
+            margin-bottom: 3px;
+        }
+        
+        .logo-tier .tier-use { font-size: 11px; color: #888; }
+        
+        .logo-tier .k-circle {
+            border: 2px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            color: var(--kl-earth);
+        }
+        
+        .logo-tier .k-circle.lg { width: 44px; height: 44px; font-size: 1.3rem; }
+        .logo-tier .k-circle.md { width: 32px; height: 32px; font-size: 0.95rem; }
+        
+        .logo-tier .logo-inline { display: flex; align-items: center; gap: 10px; }
+        .logo-tier .logo-inline .name { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--kl-deep); }
+        .logo-tier .logo-inline.sm .name { font-size: 0.95rem; }
+        .logo-tier .logo-inline .name span { font-family: 'Instrument Sans', sans-serif; color: var(--kl-camel); }
+        
+        /* Logo Variations */
+        .logo-variations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3);
+            margin: var(--space-3) 0;
+        }
+        
+        .logo-variation { padding: var(--space-4); border-radius: var(--radius-md); text-align: center; }
+        .logo-variation.light { background: var(--kl-paper); border: var(--border-light); }
+        .logo-variation.medium { background: var(--kl-fiber); }
+        .logo-variation.dark { background: var(--kl-ink); }
+        
+        .logo-variation .k-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin: 0 auto 8px;
+        }
+        
+        .logo-variation.light .k-circle, .logo-variation.medium .k-circle { border: 2px solid var(--kl-camel); color: var(--kl-earth); }
+        .logo-variation.dark .k-circle { border: 2px solid var(--kl-cashmere); color: var(--kl-cashmere); }
+        
+        .logo-variation .label {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        
+        .logo-variation.light .label, .logo-variation.medium .label { color: var(--kl-camel); }
+        .logo-variation.dark .label { color: var(--kl-cashmere); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           PROPORTIONS / GRID
+           ══════════════════════════════════════════════════════════════ */
+        .proportions-box {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            margin: var(--space-3) 0;
+            border: var(--border-light);
+        }
+        
+        .proportions-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 30px;
+            position: relative;
+        }
+        
+        .prop-logo {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .prop-logo .k-circle {
+            width: 100px;
+            height: 100px;
+            border: 2.5px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            color: var(--kl-earth);
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.85);
+        }
+        
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .grid-cell { border: 1px dashed rgba(168, 144, 112, 0.5); }
+        
+        /* Measurement rulers */
+        .measure-v {
+            position: absolute;
+            left: -36px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .measure-line {
+            flex: 1;
+            width: 1px;
+            background: var(--kl-camel);
+            position: relative;
+        }
+        
+        .measure-line::before, .measure-line::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 1px;
+            background: var(--kl-camel);
+            left: -2.5px;
+        }
+        
+        .measure-line::before { top: 0; }
+        .measure-line::after { bottom: 0; }
+        
+        .measure-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--kl-camel);
+            padding: 3px 0;
+        }
+        
+        .measure-h {
+            position: absolute;
+            top: -26px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .measure-h .measure-line { height: 1px; width: auto; flex: 1; }
+        .measure-h .measure-line::before, .measure-h .measure-line::after { width: 1px; height: 6px; top: -2.5px; left: auto; }
+        .measure-h .measure-line::before { left: 0; }
+        .measure-h .measure-line::after { right: 0; left: auto; }
+        .measure-h .measure-label { padding: 0 6px; }
+        
+        .prop-formula {
+            text-align: center;
+            margin-top: var(--space-4);
+            padding-top: var(--space-3);
+            border-top: var(--border-light);
+        }
+        
+        .prop-formula code {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            color: var(--kl-earth);
+            background: var(--kl-fiber);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+        }
+        
+        /* Clearspace */
+        .clearspace-box {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            text-align: center;
+            margin: var(--space-3) 0;
+            border: var(--border-light);
+            overflow: visible;
+        }
+        
+        .clearspace-visual {
+            display: inline-block;
+            position: relative;
+            padding: 40px;
+            margin: var(--space-2) 0;
+        }
+        
+        .clearspace-outer {
+            position: absolute;
+            top: 8px; left: 8px; right: 8px; bottom: 8px;
+            border: 1px dashed var(--kl-cashmere);
+        }
+        
+        .clearspace-inner {
+            width: 64px;
+            height: 64px;
+            border: 2px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.9rem;
+            color: var(--kl-earth);
+            background: white;
+        }
+        
+        .cs-label {
+            position: absolute;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--kl-camel);
+            background: white;
+            padding: 1px 4px;
+        }
+        
+        .cs-label.top { top: 0; left: 50%; transform: translateX(-50%); }
+        .cs-label.right { right: 0; top: 50%; transform: translateY(-50%); }
+        
+        .clearspace-note { margin-top: var(--space-2); font-size: 11px; color: #888; }
+        
+        /* Size specs */
+        .size-specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-2);
+            margin: var(--space-3) 0;
+            align-items: end;
+        }
+        
+        .size-item { text-align: center; }
+        
+        .size-item .k-circle {
+            border: 2px solid var(--kl-camel);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            color: var(--kl-earth);
+            margin: 0 auto 6px;
+        }
+        
+        .size-item.xl .k-circle { width: 48px; height: 48px; font-size: 1.4rem; }
+        .size-item.lg .k-circle { width: 36px; height: 36px; font-size: 1.1rem; }
+        .size-item.md .k-circle { width: 24px; height: 24px; font-size: 0.7rem; border-width: 1.5px; }
+        .size-item.sm .k-circle { width: 18px; height: 18px; font-size: 0.55rem; border-width: 1.5px; }
+        
+        .size-item .size-label { font-family: 'Instrument Sans', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--kl-camel); }
+        .size-item .size-value { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--kl-earth); }
+        .size-item .size-use { font-size: 10px; color: #888; margin-top: 2px; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           ELEMENTS GRID
+           ══════════════════════════════════════════════════════════════ */
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3);
+            margin: var(--space-3) 0;
+        }
+        
+        .element-card {
+            background: white;
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: var(--border-light);
+        }
+        
+        .element-visual {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-2);
+        }
+        
+        .element-card h4 { font-family: 'Fraunces', serif; font-size: var(--type-small); color: var(--kl-earth); margin-bottom: 4px; }
+        .element-card p { font-size: 11px; color: #888; margin-bottom: 0; }
+        
+        .el-corner { width: 28px; height: 28px; border-top: 2px solid var(--kl-camel); border-left: 2px solid var(--kl-camel); }
+        .el-k { width: 36px; height: 36px; border: 2px solid var(--kl-camel); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--kl-earth); }
+        .el-weave { width: 36px; height: 36px; background-image: repeating-linear-gradient(45deg, var(--kl-cashmere) 0px, var(--kl-cashmere) 1px, transparent 1px, transparent 4px); opacity: 0.7; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           COLOR SYSTEM
+           ══════════════════════════════════════════════════════════════ */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-3);
+            margin: var(--space-3) 0;
+        }
+        
+        .color-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .color-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        
+        .color-card {
+            display: flex;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: var(--border-light);
+        }
+        
+        .color-swatch { width: 56px; min-width: 56px; }
+        .color-info { padding: 10px 12px; background: white; flex: 1; }
+        .color-name { font-family: 'Fraunces', serif; font-size: var(--type-small); color: var(--kl-earth); margin-bottom: 2px; }
+        .color-values { font-family: 'DM Mono', monospace; font-size: 9px; color: #888; }
+        .color-use { font-size: 10px; color: var(--kl-camel); margin-top: 4px; font-style: italic; }
+        
+        .color-card.compact { flex-direction: column; }
+        .color-card.compact .color-swatch { width: 100%; height: 32px; min-width: auto; }
+        .color-card.compact .color-info { padding: 8px 10px; }
+        .color-card.compact .color-name { font-size: 11px; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           TYPOGRAPHY
+           ══════════════════════════════════════════════════════════════ */
+        .type-sample {
+            background: white;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            margin: var(--space-3) 0;
+            border: var(--border-light);
+        }
+        
+        .type-sample-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: var(--space-2);
+            padding-bottom: 8px;
+            border-bottom: var(--border-light);
+        }
+        
+        .type-name { font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--kl-camel); }
+        .type-specs { font-family: 'DM Mono', monospace; font-size: 10px; color: #888; }
+        
+        .type-display.fraunces { font-family: 'Fraunces', serif; }
+        .type-display.fraunces-italic { font-family: 'Fraunces', serif; font-style: italic; }
+        .type-display.instrument { font-family: 'Instrument Sans', system-ui, sans-serif; }
+        .type-display.mono { font-family: 'DM Mono', monospace; }
+        
+        .type-display.display-size { font-size: var(--type-display); color: var(--kl-deep); line-height: var(--lh-tight); }
+        .type-display.h2-size { font-size: var(--type-h2); color: var(--kl-earth); margin-top: 8px; }
+        .type-display.label-size { font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.1em; color: var(--kl-camel); }
+        .type-display.body-size { font-size: var(--type-body); color: #555; line-height: var(--lh-normal); }
+        .type-display.code-size { font-size: 12px; color: var(--kl-earth); background: var(--kl-fiber); padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 8px; }
+        
+        .type-use { font-size: 11px; color: #888; margin-top: var(--space-2); }
+        
+        /* Type Scale Visualization — v1.4 */
+        .type-scale-visual {
+            background: white;
+            border: var(--border-light);
+            border-radius: var(--radius-md);
+            margin: var(--space-4) 0;
+            overflow: hidden;
+        }
+        
+        .scale-header {
+            background: var(--kl-fiber);
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: var(--border-light);
+        }
+        
+        .scale-ratio {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--kl-camel);
+        }
+        
+        .scale-formula {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--kl-earth);
+        }
+        
+        .scale-ladder {
+            padding: var(--space-3) var(--space-4);
+        }
+        
+        .scale-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--kl-fiber);
+        }
+        
+        .scale-step:last-child {
+            border-bottom: none;
+        }
+        
+        .scale-step.active {
+            background: var(--kl-fiber);
+            margin: 0 calc(-1 * var(--space-4));
+            padding: 8px var(--space-4);
+        }
+        
+        .scale-sample {
+            color: var(--kl-deep);
+        }
+        
+        .scale-info {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--kl-pietra);
+            text-align: right;
+        }
+        
+        .scale-info code {
+            color: var(--kl-earth);
+            background: none;
+            padding: 0;
+        }
+
+        /* Spacing scale */
+        .spacing-scale {
+            display: flex;
+            align-items: flex-end;
+            gap: var(--space-2);
+            margin: var(--space-3) 0;
+            padding: var(--space-4);
+            background: white;
+            border: var(--border-light);
+            border-radius: var(--radius-md);
+        }
+        
+        .spacing-item { text-align: center; flex: 1; }
+        .spacing-bar { background: var(--kl-cashmere); margin: 0 auto 6px; width: 18px; border-radius: 1px; }
+        .spacing-item .spacing-label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--kl-camel); }
+        .spacing-item .spacing-value { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--kl-earth); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           TOKENS DISPLAY — Design System Properties
+           ══════════════════════════════════════════════════════════════ */
+        .tokens-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-3);
+            margin: var(--space-3) 0;
+        }
+        
+        .token-card {
+            background: white;
+            border: var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+        }
+        
+        .token-card h5 {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--kl-camel);
+            margin-bottom: var(--space-2);
+        }
+        
+        .token-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: var(--border-light);
+        }
+        
+        .token-row:last-child { border-bottom: none; }
+        
+        .token-name { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--kl-earth); }
+        .token-value { font-family: 'DM Mono', monospace; font-size: 10px; color: #888; display: flex; align-items: center; gap: 6px; }
+        
+        .token-visual { display: inline-block; }
+        .token-visual.radius { width: 14px; height: 14px; background: var(--kl-cashmere); }
+        .token-visual.shadow { width: 18px; height: 12px; background: white; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           DO'S AND DON'TS
+           ══════════════════════════════════════════════════════════════ */
+        .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: var(--space-3) 0; }
+        .dos, .donts { padding: var(--space-3); border-radius: var(--radius-md); background: var(--kl-fiber); }
+        .dos { border-left: 3px solid var(--kl-earth); }
+        .donts { border-left: 3px solid var(--kl-cashmere); opacity: 0.8; }
+        .dos h4, .donts h4 { font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-2); }
+        .dos h4 { color: var(--kl-earth); }
+        .donts h4 { color: var(--kl-camel); }
+        .dos ul, .donts ul { list-style: none; }
+        .dos li, .donts li { font-size: 11px; padding: 4px 0 4px 16px; position: relative; line-height: 1.5; color: var(--kl-earth); }
+        .dos li::before { content: "✓"; position: absolute; left: 0; color: var(--kl-earth); font-size: 10px; }
+        .donts li::before { content: "✗"; position: absolute; left: 0; color: var(--kl-camel); font-size: 10px; }
+        .donts li { color: var(--kl-pietra); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           VOICE & TONE
+           ══════════════════════════════════════════════════════════════ */
+        .personality-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin: var(--space-3) 0; }
+        .personality-card { background: white; padding: var(--space-3); border-radius: var(--radius-md); border: var(--border-light); }
+        .personality-card .trait { font-family: 'Fraunces', serif; font-size: var(--type-h2); color: var(--kl-earth); margin-bottom: 3px; }
+        .personality-card .not-trait { font-size: 11px; color: var(--kl-camel); margin-bottom: 6px; }
+        .personality-card .description { font-size: 11px; color: #666; line-height: 1.5; }
+        
+        .tone-example { background: white; border: var(--border-light); border-radius: var(--radius-md); margin: var(--space-3) 0; overflow: hidden; }
+        .tone-example-header { background: var(--kl-fiber); padding: 8px 12px; font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--kl-camel); }
+        .tone-example-content { padding: var(--space-3); }
+        .tone-bad, .tone-good { padding: 10px 14px; border-radius: var(--radius-sm); font-size: 11px; margin-bottom: 8px; line-height: 1.6; background: var(--kl-fiber); position: relative; padding-left: 28px; }
+        .tone-bad { opacity: 0.7; }
+        .tone-good { background: white; border: var(--border-light); }
+        .tone-bad::before { content: "✗"; position: absolute; left: 10px; color: var(--kl-camel); font-weight: 500; }
+        .tone-good::before { content: "✓"; position: absolute; left: 10px; color: var(--kl-earth); font-weight: 500; }
+        .tone-good:last-child { margin-bottom: 0; }
+        
+        .glossary-table { width: 100%; border-collapse: collapse; margin: var(--space-3) 0; }
+        .glossary-table th { font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--kl-camel); text-align: left; padding: 6px 8px; border-bottom: var(--border-medium); font-weight: 400; }
+        .glossary-table td { padding: 6px 8px; border-bottom: var(--border-light); font-size: 11px; }
+        .glossary-table td:first-child { color: var(--kl-earth); font-weight: 500; }
+        .glossary-table td:nth-child(2) { color: var(--kl-pietra); text-decoration: line-through; opacity: 0.6; }
+        .glossary-table td:nth-child(3) { color: var(--kl-camel); font-style: italic; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           ACCESSIBILITY — v1.1
+           ══════════════════════════════════════════════════════════════ */
+        .contrast-table { width: 100%; border-collapse: collapse; margin: var(--space-3) 0; font-size: 11px; }
+        .contrast-table th { font-family: 'Instrument Sans', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--kl-camel); text-align: left; padding: 6px 8px; border-bottom: var(--border-medium); font-weight: 400; }
+        .contrast-table td { padding: 6px 8px; border-bottom: var(--border-light); }
+        .contrast-table .swatch { display: inline-block; width: 16px; height: 16px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+        .contrast-table .ratio { font-family: 'DM Mono', monospace; font-size: 10px; }
+        .contrast-table .pass { color: var(--kl-earth); font-weight: 500; }
+        .contrast-table .warn { color: var(--kl-camel); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           PATTERN LIBRARY — v1.1
+           ══════════════════════════════════════════════════════════════ */
+        .pattern-example { background: white; border: var(--border-light); border-radius: var(--radius-md); margin: var(--space-3) 0; overflow: hidden; }
+        .pattern-example-header { background: var(--kl-fiber); padding: 8px 12px; font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--kl-camel); display: flex; justify-content: space-between; align-items: center; }
+        .pattern-example-header .principle { font-family: 'Fraunces', serif; font-style: italic; text-transform: none; letter-spacing: 0; }
+        .pattern-example-content { padding: var(--space-3); }
+        
+        .code-block {
+            background: var(--kl-earth);
+            color: var(--kl-cashmere);
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            padding: var(--space-3);
+            border-radius: var(--radius-md);
+            margin: var(--space-3) 0;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .code-block .comment { color: #6b6660; }
+        .code-block .highlight { color: var(--kl-paper); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           DOCUMENT SYSTEM
+           ══════════════════════════════════════════════════════════════ */
+        .doc-system-intro {
+            background: var(--kl-fiber);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            margin: var(--space-4) 0;
+            text-align: center;
+        }
+        
+        .doc-system-intro h4 { font-family: 'Fraunces', serif; font-size: var(--type-h2); color: var(--kl-earth); margin-bottom: var(--space-3); }
+        .system-flow { display: flex; align-items: center; justify-content: center; gap: var(--space-3); }
+        .system-box { background: white; padding: 10px 20px; border-radius: var(--radius-sm); }
+        .system-box .box-title { font-family: 'Fraunces', serif; font-size: var(--type-small); color: var(--kl-earth); margin-bottom: 2px; }
+        .system-box .box-desc { font-size: 11px; color: #888; }
+        .system-arrow { color: var(--kl-cashmere); font-size: 1rem; }
+        
+        .doc-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin: var(--space-4) 0; }
+        .doc-column { text-align: center; }
+        .doc-column-label { font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--kl-camel); margin-bottom: var(--space-3); }
+        
+        .doc-mockup {
+            background: var(--kl-paper);
+            border: var(--border-light);
+            border-radius: var(--radius-sm);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-3);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .doc-mockup.cover-mockup {
+            aspect-ratio: 1/1.3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 28px;
+        }
+        
+        .doc-mockup.internal-mockup {
+            aspect-ratio: 1/1.3;
+            padding: var(--space-3);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cover-mockup .corner-tl { position: absolute; top: 28px; left: 28px; width: 18px; height: 18px; border-top: 2px solid var(--kl-camel); border-left: 2px solid var(--kl-camel); }
+        .cover-mockup .corner-br { position: absolute; bottom: 28px; right: 28px; width: 18px; height: 18px; border-bottom: 2px solid var(--kl-camel); border-right: 2px solid var(--kl-camel); }
+        .cover-mockup .weave-square { position: absolute; top: 28px; right: 28px; width: 24px; height: 24px; background-image: repeating-linear-gradient(45deg, var(--kl-cashmere) 0px, var(--kl-cashmere) 1px, transparent 1px, transparent 4px); opacity: 0.5; }
+        .cover-mockup .mock-eyebrow { font-family: 'Instrument Sans', sans-serif; font-size: 7px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--kl-camel); margin-bottom: 8px; }
+        .cover-mockup .mock-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; color: var(--kl-deep); line-height: 1.2; margin-bottom: 3px; }
+        .cover-mockup .mock-subtitle { font-family: 'Fraunces', serif; font-size: 10px; font-style: italic; color: var(--kl-camel); margin-bottom: 12px; }
+        .cover-mockup .mock-divider { width: 20px; height: 1px; background: var(--kl-cashmere); margin: 0 auto 12px; }
+        .cover-mockup .mock-meta { font-size: 8px; color: var(--kl-camel); }
+        .cover-mockup .circle-k { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); width: 22px; height: 22px; border: 1.5px solid var(--kl-camel); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 0.65rem; color: var(--kl-earth); }
+        
+        .internal-mockup .corner-tl { position: absolute; top: 0; left: 0; width: 14px; height: 14px; border-top: 2px solid var(--kl-camel); border-left: 2px solid var(--kl-camel); }
+        .internal-mockup .mock-header { margin-top: 4px; margin-bottom: 10px; }
+        .internal-mockup .mock-eyebrow { font-family: 'Instrument Sans', sans-serif; font-size: 7px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kl-camel); margin-bottom: 3px; }
+        .internal-mockup .mock-title { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 400; color: var(--kl-deep); line-height: 1.2; margin-bottom: 2px; }
+        .internal-mockup .mock-subtitle { font-family: 'Fraunces', serif; font-size: 9px; font-style: italic; color: var(--kl-camel); }
+        .internal-mockup .mock-content { flex: 1; }
+        .internal-mockup .mock-divider { width: 16px; height: 1px; background: var(--kl-cashmere); margin: 8px 0; }
+        .internal-mockup .mock-section-title { font-family: 'Fraunces', serif; font-size: 9px; font-weight: 400; color: var(--kl-earth); margin-bottom: 5px; }
+        .internal-mockup .mock-line { height: 3px; background: var(--kl-fiber); margin-bottom: 3px; border-radius: 1px; }
+        .internal-mockup .mock-footer { margin-top: auto; padding-top: 8px; border-top: var(--border-light); display: flex; justify-content: space-between; align-items: center; }
+        .internal-mockup .footer-text { font-size: 7px; color: var(--kl-camel); }
+        .internal-mockup .circle-k { width: 14px; height: 14px; border: 1px solid var(--kl-camel); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 7px; color: var(--kl-earth); }
+        
+        .doc-column-desc { font-size: 11px; color: #666; text-align: left; line-height: 1.5; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           TABLE OF CONTENTS
+           ══════════════════════════════════════════════════════════════ */
+        .toc { margin: var(--space-4) 0; }
+        .toc-part { margin-bottom: var(--space-4); }
+        .toc-part-title { font-family: 'Instrument Sans', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--kl-camel); margin-bottom: 10px; padding-bottom: 6px; border-bottom: var(--border-medium); }
+        .toc-item { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0 6px var(--space-3); }
+        .toc-item a { text-decoration: none; color: inherit; }
+        .toc-item a:hover .toc-title { color: var(--kl-camel); }
+        .toc-title { font-family: 'Fraunces', serif; font-size: var(--type-small); color: var(--kl-earth); transition: color 0.15s; }
+        .toc-page { font-family: 'Instrument Sans', sans-serif; font-size: 11px; color: #999; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           NAMING / CODE EXAMPLES
+           ══════════════════════════════════════════════════════════════ */
+        .naming-example { 
+            background: var(--kl-earth); 
+            color: var(--kl-cashmere); 
+            font-family: 'DM Mono', monospace; 
+            font-size: 11px; 
+            padding: var(--space-3) var(--space-4); 
+            border-radius: var(--radius-md); 
+            margin: var(--space-3) 0; 
+            line-height: 1.8; 
+        }
+        .naming-example .comment { color: #6b6660; }
+        .naming-example .highlight { color: var(--kl-paper); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           CHANGELOG
+           ══════════════════════════════════════════════════════════════ */
+        .changelog-entry { border-left: 2px solid var(--kl-cashmere); padding-left: var(--space-3); margin-bottom: var(--space-4); }
+        .changelog-version { font-family: 'DM Mono', monospace; font-size: var(--type-small); color: var(--kl-earth); font-weight: 500; }
+        .changelog-date { font-size: 11px; color: var(--kl-camel); margin-left: 8px; }
+        .changelog-changes { margin-top: 8px; font-size: 11px; color: #666; line-height: 1.6; }
+        .changelog-changes li { margin-bottom: 3px; }
+        
+        /* ══════════════════════════════════════════════════════════════
+           CLOSING
+           ══════════════════════════════════════════════════════════════ */
+        .closing-quote { font-family: 'Fraunces', serif; font-size: var(--type-h2); font-style: italic; color: var(--kl-earth); margin-bottom: var(--space-2); line-height: 1.4; }
+        .closing-signature { font-family: 'Fraunces', serif; font-size: var(--type-body); font-weight: 400; color: var(--kl-camel); letter-spacing: 0.05em; }
+        .closing-attribution { font-size: 11px; color: var(--kl-camel); }
+        
+        /* ══════════════════════════════════════════════════════════════
+           RESPONSIVE
+           ══════════════════════════════════════════════════════════════ */
+        @media (max-width: 800px) {
+            .page-content { padding: 40px 32px; }
+            .cover .corner-tl, .cover .corner-br, .cover .weave-square, .cover .circle-k { display: none; }
+            .logo-hierarchy, .logo-variations, .elements-grid { grid-template-columns: 1fr; }
+            .color-grid, .color-grid.cols-4, .color-grid.cols-3 { grid-template-columns: 1fr; }
+            .doc-comparison, .dos-donts, .personality-grid, .tokens-grid { grid-template-columns: 1fr; }
+            .size-specs { grid-template-columns: repeat(2, 1fr); }
+            .system-flow { flex-direction: column; }
+            .system-arrow { transform: rotate(90deg); }
+            .ai-box-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ════════════════════════════════════════════════════════════════
+         COVER PAGE
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page">
+        <div class="page-content cover">
+            <div class="corner-tl"></div>
+            <div class="corner-br"></div>
+            <div class="weave-square"></div>
+            <div class="cover-content">
+                <div class="cover-eyebrow">Brand System</div>
+                <h1 class="cover-title">Kashmir Lab</h1>
+                <p class="cover-subtitle">Visual & Verbal Identity</p>
+                <div class="cover-divider"></div>
+                <p class="cover-version">Versione 2.0 — Febbraio 2026</p>
+            </div>
+            <div class="circle-k">K</div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         PREFAZIONE
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="prefazione">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Prefazione</div>
+                <h2 class="page-title">Come Usare Questo Documento</h2>
+                <p class="page-subtitle">Per umani e intelligenze artificiali</p>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Per chi legge</h3>
+                <p>Questo documento è il <strong>sistema operativo visivo e verbale</strong> di Kashmir Lab. Ogni sezione segue una struttura consistente: <strong>narrativa</strong> (il perché) → <strong>specifiche</strong> (il cosa) → <strong>razionale</strong> (la ragione delle scelte).</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Architettura</h3>
+                <p>Questo documento definisce <strong>identità e principi</strong> — il "cosa" e il "perché". Per prodotti digitali che richiedono implementazione tecnica completa (temi, componenti, Tailwind), questo documento viene esteso da un <strong>UI Design System</strong> separato che definisce il "come".</p>
+                <div class="spec-box">
+                    <code>Brand System → Identità, principi, semantica</code>
+                    <code>UI Design System → Tokens, componenti, codice</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Livelli di invarianza</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Livello</th><th>Significato</th><th>Modifica</th></tr></thead>
+                    <tbody>
+                        <tr><td>Sacro</td><td>Identità core</td><td>Mai</td></tr>
+                        <tr><td>Stabile</td><td>Fondamenta consolidate</td><td>Solo con forte ragione</td></tr>
+                        <tr><td>Adattabile</td><td>Può evolvere col sistema</td><td>Sì, documentando</td></tr>
+                        <tr><td>Fluido</td><td>Pensato per crescere</td><td>Liberamente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="ai-box">
+                <div class="ai-box-header">
+                    <div class="ai-box-icon">AI</div>
+                    <span class="ai-box-title">Istruzioni per AI</span>
+                </div>
+                <div class="ai-box-content">
+                    <div class="ai-box-section">
+                        <h5>Quando generi contenuti</h5>
+                        <ul>
+                            <li>Rispetta i valori nei blocchi spec</li>
+                            <li>Usa il tono definito in Voice</li>
+                            <li>In dubbio, scegli l'opzione sobria</li>
+                            <li>Verifica contrasti accessibilità</li>
+                        </ul>
+                    </div>
+                    <div class="ai-box-section">
+                        <h5>Quando modifichi</h5>
+                        <ul>
+                            <li>Verifica il livello di invarianza</li>
+                            <li>Mantieni lo schema strutturale</li>
+                            <li>Testa contrasti WCAG</li>
+                            <li>Passa il test Kashmir</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ai-box-footer">Kashmir Lab è artigianale, preciso, caldo.</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Errori comuni da evitare</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Errore</th><th>Perché è sbagliato</th><th>Correzione</th></tr></thead>
+                    <tbody>
+                        <tr><td>Emoji in comunicazioni formali</td><td>Contraddice eleganza sobria</td><td>Rimuovere</td></tr>
+                        <tr><td>"Siamo entusiasti di annunciare"</td><td>Corporate speak generico</td><td>Fatto concreto</td></tr>
+                        <tr><td>Border-radius > 6px</td><td>Troppo morbido</td><td>Max --radius-lg</td></tr>
+                        <tr><td>Lista puntata per 2 elementi</td><td>Overformatting</td><td>Frase: "X e Y"</td></tr>
+                        <tr><td>Bold su più di 3 parole</td><td>Perde efficacia</td><td>Una parola chiave</td></tr>
+                        <tr><td>"Caro cliente" / "Gentilissimo"</td><td>Troppo formale</td><td>Nome proprio</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Cosa significa "sobrio"</h3>
+                <p>Quando hai due opzioni valide, scegli quella che richiede meno per comunicare lo stesso significato.</p>
+                <table class="specs-table">
+                    <thead><tr><th>Situazione</th><th>Opzione sobria</th></tr></thead>
+                    <tbody>
+                        <tr><td>Più corto vs più lungo</td><td>Più corto, se il messaggio è completo</td></tr>
+                        <tr><td>Con o senza bold</td><td>Senza, se il testo parla da solo</td></tr>
+                        <tr><td>Pattern sì vs no</td><td>No, se non è copertina</td></tr>
+                        <tr><td>Formale vs informale</td><td>Formale, se non conosci l'interlocutore</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         INDICE
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="indice">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">00</div>
+                <h2 class="page-title">Indice</h2>
+            </div>
+            <div class="toc">
+                <div class="toc-part">
+                    <div class="toc-part-title">Parte I — Essenza</div>
+                    <div class="toc-item"><a href="#chisiamo"><span class="toc-title">01 — Chi siamo</span></a><span class="toc-page">Mission, valori, posizionamento</span></div>
+                    <div class="toc-item"><a href="#marchio"><span class="toc-title">02 — Il Marchio</span></a><span class="toc-page">Logo, proporzioni, varianti</span></div>
+                    <div class="toc-item"><a href="#elementi"><span class="toc-title">03 — Elementi Firma</span></a><span class="toc-page">Angolo, Cerchio K, Pattern</span></div>
+                </div>
+                <div class="toc-part">
+                    <div class="toc-part-title">Parte II — Fondamenta</div>
+                    <div class="toc-item"><a href="#colori"><span class="toc-title">04 — Colori</span></a><span class="toc-page">Palette brand, interattiva, funzionale</span></div>
+                    <div class="toc-item"><a href="#accessibilita"><span class="toc-title">05 — Accessibilità</span></a><span class="toc-page">Contrasti WCAG, combinazioni</span></div>
+                    <div class="toc-item"><a href="#ritmo"><span class="toc-title">06 — Ritmo Visivo</span></a><span class="toc-page">Tipografia fluida, spaziature, tokens</span></div>
+                    <div class="toc-item"><a href="#visivi"><span class="toc-title">07 — Elementi Visivi</span></a><span class="toc-page">Icone, fotografia, motion</span></div>
+                </div>
+                <div class="toc-part">
+                    <div class="toc-part-title">Parte III — Voce</div>
+                    <div class="toc-item"><a href="#voice"><span class="toc-title">08 — Voice</span></a><span class="toc-page">Personalità, principi, glossario</span></div>
+                    <div class="toc-item"><a href="#tone"><span class="toc-title">09 — Tone in Context</span></a><span class="toc-page">Modulazione situazionale</span></div>
+                    <div class="toc-item"><a href="#patterns"><span class="toc-title">10 — Pattern Library</span></a><span class="toc-page">Come scriviamo cosa</span></div>
+                </div>
+                <div class="toc-part">
+                    <div class="toc-part-title">Parte IV — Applicazione</div>
+                    <div class="toc-item"><a href="#documenti"><span class="toc-title">11 — Sistema Documenti</span></a><span class="toc-page">Copertina vs interni</span></div>
+                    <div class="toc-item"><a href="#template"><span class="toc-title">12 — Template e Asset</span></a><span class="toc-page">Naming, risorse</span></div>
+                </div>
+                <div class="toc-part">
+                    <div class="toc-part-title">Appendice</div>
+                    <div class="toc-item"><a href="#governance"><span class="toc-title">A — Governance</span></a><span class="toc-page">Regole di modifica</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         01 CHI SIAMO
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="chisiamo">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte I — Essenza / 01</div>
+                <h2 class="page-title">Chi siamo</h2>
+                <p class="page-subtitle">L'anima di Kashmir Lab</p>
+                <span class="invariance-tag">SACRO</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Il nome</h3>
+                <p><strong>Kashmir Lab</strong> unisce due mondi: il cashmere — simbolo di artigianalità e lusso sottile — con il laboratorio, luogo di sperimentazione e metodo. Il nome stesso è la nostra dichiarazione: <strong>artigianalità + metodo creativo</strong>.</p>
+                <div class="spec-box">
+                    <code>Nome: Kashmir Lab</code>
+                    <code>Scrittura: "Kashmir" + spazio + "Lab" — mai unito, mai trattino</code>
+                    <code>Pronuncia: /kaʃˈmir lab/</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Mission</h3>
+                <div class="mission-box">
+                    <p class="mission-text">La tecnologia accompagna ogni avventura.<br>Noi le tessiamo l'anima.</p>
+                    <div class="tagline">Anima nella tecnologia.</div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Posizionamento</h3>
+                <p style="font-family: 'Fraunces', serif; font-size: var(--type-h3); font-style: italic; color: var(--kl-earth); margin: var(--space-3) 0; line-height: 1.4;">"Consulenza tecnologica con l'anima dell'artigianato e l'occhio del design."</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">I valori</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Valore</th><th>Significato</th></tr></thead>
+                    <tbody>
+                        <tr><td>Artigianalità</td><td>Ogni dettaglio curato come un sarto cura un abito su misura</td></tr>
+                        <tr><td>Eleganza</td><td>Sofisticazione senza ostentazione, bellezza nella semplicità</td></tr>
+                        <tr><td>Raffinatezza</td><td>Scelte consapevoli, niente è casuale</td></tr>
+                        <tr><td>Personalità</td><td>Identità forte che si distingue senza gridare</td></tr>
+                        <tr><td>Riconoscibilità</td><td>Chi sa, riconosce. Chi non sa, percepisce qualità</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale — Soft Minimalism</h4>
+                <p>Il framework è il <strong>Soft Minimalism</strong> di Norm Architects + Kinfolk: "Richness focused by restraint, simplicity imbued with warmth." Non minimalismo sterile (MUJI freddo), non corporate (IBM), non startup trendy (Circular). Kashmir Lab è <strong>precisione tecnica con calore umano</strong> — tutto tiepido.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         01B CHI SIAMO (continua)
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte I — Essenza / 01</div>
+                <h2 class="page-title">Chi siamo</h2>
+                <p class="page-subtitle">Per chi lavoriamo e come ci presentiamo</p>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Per chi lavoriamo</h3>
+                <p>Non definiamo il cliente per dimensione o settore. Lo definiamo per <strong>attitudine</strong>.</p>
+                <div class="target-box">
+                    <p class="target-intro">Lavoriamo con chi:</p>
+                    <ul class="target-list">
+                        <li>Preferisce <em>fatto bene</em> a <em>fatto in fretta</em></li>
+                        <li>Cerca un partner, non un fornitore</li>
+                        <li>Apprezza quando qualcuno dice "questo non è il modo giusto"</li>
+                        <li>Vuole capire, non solo delegare</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Boilerplate</h3>
+                <p>Descrizioni standard di Kashmir Lab, pronte all'uso.</p>
+                
+                <div class="boilerplate-section">
+                    <div class="boilerplate-label">Micro — firma email, bio social</div>
+                    <div class="boilerplate-text">Kashmir Lab — Consulenza tecnologica artigianale. Anima nella tecnologia.</div>
+                </div>
+                
+                <div class="boilerplate-section">
+                    <div class="boilerplate-label">Standard — about page, proposte</div>
+                    <div class="boilerplate-text">Kashmir Lab è uno studio di consulenza tecnologica che unisce precisione tecnica e cura artigianale. Creiamo soluzioni su misura per chi cerca qualità, non scorciatoie.</div>
+                </div>
+                
+                <div class="boilerplate-section">
+                    <div class="boilerplate-label">Esteso — press kit, presentazioni</div>
+                    <div class="boilerplate-text">Kashmir Lab nasce dall'idea che la tecnologia migliore è quella che non si nota — funziona, è bella, dura nel tempo. Siamo uno studio di consulenza che lavora come un artigiano: ogni progetto è un pezzo unico, costruito con metodo e attenzione al dettaglio. Non vendiamo ore o "risorse": offriamo soluzioni pensate per chi le userà. Per aziende e professionisti che cercano un partner tecnico con l'occhio del design e l'etica del lavoro ben fatto.</div>
+                </div>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>Il boilerplate garantisce coerenza: ovunque si parli di Kashmir Lab, le parole chiave sono le stesse. <strong>Anima</strong>, <strong>artigianale</strong>, <strong>su misura</strong>, <strong>qualità</strong>.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         02 IL MARCHIO
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="marchio">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte I — Essenza / 02</div>
+                <h2 class="page-title">Il Marchio</h2>
+                <p class="page-subtitle">Logo, gerarchia e varianti</p>
+                <span class="invariance-tag">SACRO (forma) · STABILE (varianti)</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Il Cerchio K</h3>
+                <p>Il cuore del marchio è il <strong>Cerchio K</strong> — una K inscritta in un cerchio. Semplice, riconoscibile, elegante. Il cerchio è completezza; la K è firma.</p>
+                <div class="logo-display">
+                    <div class="logo-main">
+                        <div class="logo-k-large">K</div>
+                    </div>
+                    <p class="logo-caption">Il Cerchio K — elemento fondante dell'identità</p>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Gerarchia</h3>
+                <p>Tre forme, ognuna con il suo contesto. La scelta dipende dalla familiarità dell'interlocutore: più il pubblico ci conosce, meno abbiamo bisogno di dire.</p>
+                <div class="logo-hierarchy">
+                    <div class="logo-tier">
+                        <div class="tier-label">Primario</div>
+                        <div class="tier-visual">
+                            <div class="logo-inline"><div class="k-circle lg">K</div><div class="name">Kashmir <span>Lab</span></div></div>
+                        </div>
+                        <div class="tier-name">Completo</div>
+                        <div class="tier-use">Prima impressione</div>
+                    </div>
+                    <div class="logo-tier">
+                        <div class="tier-label">Secondario</div>
+                        <div class="tier-visual">
+                            <div class="logo-inline sm"><div class="k-circle md">K</div><div class="name">Kashmir</div></div>
+                        </div>
+                        <div class="tier-name">Compatto</div>
+                        <div class="tier-use">Spazi ridotti</div>
+                    </div>
+                    <div class="logo-tier">
+                        <div class="tier-label">Firma</div>
+                        <div class="tier-visual"><div class="k-circle lg">K</div></div>
+                        <div class="tier-name">Solo K</div>
+                        <div class="tier-use">Fidelizzazione</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Varianti cromatiche</h3>
+                <div class="logo-variations">
+                    <div class="logo-variation light"><div class="k-circle">K</div><span class="label">Chiaro</span></div>
+                    <div class="logo-variation medium"><div class="k-circle">K</div><span class="label">Medio</span></div>
+                    <div class="logo-variation dark"><div class="k-circle">K</div><span class="label">Scuro</span></div>
+                </div>
+                <div class="spec-box">
+                    <code>Positivo: bordo Camel #A89070, K Earth #5C5044</code>
+                    <code>Negativo: bordo/K Cashmere #D4C4AE</code>
+                    <code>Mono: nero #1A1815 oppure bianco #FFFFFF</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         02B PROPORZIONI
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte I — Essenza / 02</div>
+                <h2 class="page-title">Il Marchio</h2>
+                <p class="page-subtitle">Costruzione, proporzioni, dimensioni</p>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Griglia di costruzione</h3>
+                <p>Il logo è costruito su una griglia <strong>4×4 unità</strong>. L'unità base <strong>x</strong> = ¼ del diametro. Le proporzioni seguono la <strong>regola 1:2</strong> — ogni elemento è il 50% del suo contenitore.</p>
+                
+                <div class="proportions-box">
+                    <div class="proportions-grid">
+                        <div class="prop-logo">
+                            <div class="k-circle">K</div>
+                            <div class="grid-overlay">
+                                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                            </div>
+                            <div class="measure-v">
+                                <div class="measure-line"></div>
+                                <span class="measure-label">4x</span>
+                            </div>
+                            <div class="measure-h">
+                                <div class="measure-line"></div>
+                                <span class="measure-label">4x</span>
+                                <div class="measure-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prop-formula">
+                        <code>Diametro = 4x · Bordo = 0.1x · K height = 2x · K stroke = 0.1x</code>
+                    </div>
+                </div>
+                
+                <div class="spec-box">
+                    <code>Griglia: 4×4 unità (x = diametro ÷ 4)</code>
+                    <code>Rapporto K/cerchio: 50% del diametro (regola 1:2)</code>
+                    <code>Altezza K: 2x (50% di 4x)</code>
+                    <code>Altezza testo logo esteso: 50% del diametro del cerchio</code>
+                    <code>Spessore tratti K: uguale al bordo cerchio (0.1x)</code>
+                    <code>Centratura K: ottica (+2% verso l'alto), non geometrica</code>
+                    <code>Angoli K: netti, non arrotondati</code>
+                    <code>Spessore bordo cerchio: 2.5% del diametro (min 1.5px)</code>
+                    <code>Esempio: x=16px → diametro=64px, K alta=32px, bordo≈1.6px</code>
+                </div>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale — Regola 1:2 (Ottava)</h4>
+                <p>Le proporzioni seguono il rapporto 1:2, alla base dell'armonia musicale (ottava) e del design razionalista svizzero. Una sola regola governa tutto: <strong>ogni elemento è il 50% del suo contenitore</strong>. Questo garantisce coerenza sistemica, maggiore respiro visivo, migliore scalabilità a dimensioni ridotte, e semplicità nel documentare e replicare. Il cashmere è leggerezza e aria — le proporzioni riflettono questa essenza. La centratura ottica (+2%) compensa la percezione umana che vede le lettere centrate matematicamente come "cadenti".</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Area di rispetto</h3>
+                <p>Spazio libero minimo: <strong>1x</strong> su ogni lato. Come il cashmere ha bisogno di spazio per mostrare qualità.</p>
+                
+                <div class="clearspace-box">
+                    <div class="clearspace-visual">
+                        <div class="clearspace-outer"></div>
+                        <div class="clearspace-inner">K</div>
+                        <span class="cs-label top">1x</span>
+                        <span class="cs-label right">1x</span>
+                    </div>
+                    <p class="clearspace-note">Minimo 1x — in contesti vincolati: 0.75x</p>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Dimensioni d'uso</h3>
+                <div class="size-specs">
+                    <div class="size-item xl"><div class="k-circle">K</div><div class="size-label">XL</div><div class="size-value">64px</div><div class="size-use">Copertine</div></div>
+                    <div class="size-item lg"><div class="k-circle">K</div><div class="size-label">LG</div><div class="size-value">48px</div><div class="size-use">Header</div></div>
+                    <div class="size-item md"><div class="k-circle">K</div><div class="size-label">MD</div><div class="size-value">32px</div><div class="size-use">Documenti</div></div>
+                    <div class="size-item sm"><div class="k-circle">K</div><div class="size-label">MIN</div><div class="size-value">20px</div><div class="size-use">Footer</div></div>
+                </div>
+                <div class="spec-box">
+                    <code>Minimo assoluto: 20px / 5mm</code>
+                    <code>Sotto 20px: bordo illeggibile</code>
+                    <code>Favicon 16px: versione semplificata, bordo 1px</code>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         03 ELEMENTI FIRMA
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="elementi">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte I — Essenza / 03</div>
+                <h2 class="page-title">Elementi Firma</h2>
+                <p class="page-subtitle">I tre elementi che definiscono Kashmir Lab</p>
+                <span class="invariance-tag">SACRO (elementi) · STABILE (posizioni)</span>
+            </div>
+            
+            <div class="content-section">
+                <p>Tre elementi che lavorano insieme creando riconoscibilità attraverso la ripetizione coerente.</p>
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <div class="element-visual"><div class="el-corner"></div></div>
+                        <h4>L'Angolo</h4>
+                        <p>Apre i documenti. Precisione.</p>
+                    </div>
+                    <div class="element-card">
+                        <div class="element-visual"><div class="el-k">K</div></div>
+                        <h4>Il Cerchio K</h4>
+                        <p>Chiude e sigilla l'identità.</p>
+                    </div>
+                    <div class="element-card">
+                        <div class="element-visual"><div class="el-weave"></div></div>
+                        <h4>Il Pattern</h4>
+                        <p>Trama cashmere. Uso riservato.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Gerarchia e frequenza</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Elemento</th><th>Posizione</th><th>Frequenza</th></tr></thead>
+                    <tbody>
+                        <tr><td>Angolo alto-sx</td><td>Top-left, bordo pagina</td><td>Ogni pagina</td></tr>
+                        <tr><td>Cerchio K</td><td>Footer / centrato cover</td><td>Ogni pagina</td></tr>
+                        <tr><td>Angolo basso-dx</td><td>Bottom-right</td><td>Solo copertina</td></tr>
+                        <tr><td>Pattern</td><td>Top-right, accento</td><td>Solo copertina</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Pattern trama — Specifica tecnica</h3>
+                <p>Il pattern è l'elemento più distintivo. Usalo con parsimonia.</p>
+                
+                <div class="code-block">
+<span class="comment">/* CSS — Pattern standard */</span>
+.kashmir-weave {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--kl-cashmere) 0px,
+    var(--kl-cashmere) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  opacity: 0.5;
+}
+
+<span class="comment">/* CSS — Pattern denso (aree piccole) */</span>
+.kashmir-weave-dense {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--kl-cashmere) 0px,
+    var(--kl-cashmere) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.6;
+}
+                </div>
+                
+                <div class="spec-box">
+                    <code>Angolo: sempre 45°</code>
+                    <code>Linea: 1px, colore Cashmere #D4C4AE</code>
+                    <code>Gap standard: 5px (per aree ≥40px)</code>
+                    <code>Gap denso: 3px (per aree &lt;40px)</code>
+                    <code>Opacità: 50% standard, 60% su sfondi scuri</code>
+                    <code>Dimensione area: minimo 24px, massimo 80px</code>
+                    <code>Mai su testo o elementi interattivi</code>
+                </div>
+                
+                <div class="code-block">
+<span class="comment">&lt;!-- SVG — Per contesti non-CSS --&gt;</span>
+&lt;svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;pattern id="kashmir-weave" width="5" height="5" 
+             patternUnits="userSpaceOnUse" 
+             patternTransform="rotate(45)"&gt;
+      &lt;line x1="0" y1="0" x2="0" y2="5" 
+            stroke="#D4C4AE" stroke-width="1"/&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
+  &lt;rect width="100%" height="100%" 
+        fill="url(#kashmir-weave)" opacity="0.5"/&gt;
+&lt;/svg&gt;
+                </div>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>Come l'Intrecciato di Bottega crea riconoscibilità senza logo visibile, il nostro sistema costruisce identità attraverso elementi che non dichiarano il nome ma lo evocano. L'angolo + K sempre presenti; il pattern riservato mantiene valore e distintività.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         04 COLORI
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="colori">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte II — Fondamenta / 04</div>
+                <h2 class="page-title">Colori</h2>
+                <p class="page-subtitle">Palette brand, interattiva e funzionale</p>
+                <span class="invariance-tag">SACRO (brand) · ADATTABILE (interattiva, funzionale)</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Palette Brand</h3>
+                <p>Toni naturali della fibra di cashmere: dal bianco latte al marrone terra. Solo calore, naturalezza, eleganza sobria.</p>
+                <div class="color-grid">
+                    <div class="color-card"><div class="color-swatch" style="background: #faf8f5;"></div><div class="color-info"><div class="color-name">Paper</div><div class="color-values">#FAF8F5</div><div class="color-use">Sfondo principale</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #f0ebe3;"></div><div class="color-info"><div class="color-name">Fiber</div><div class="color-values">#F0EBE3</div><div class="color-use">Sfondo secondario</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #d4c4ae;"></div><div class="color-info"><div class="color-name">Cashmere</div><div class="color-values">#D4C4AE</div><div class="color-use">Pattern, divisori</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #a89070;"></div><div class="color-info"><div class="color-name">Camel</div><div class="color-values">#A89070</div><div class="color-use">Elementi firma</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #5c5044;"></div><div class="color-info"><div class="color-name">Earth</div><div class="color-values">#5C5044</div><div class="color-use">Testo enfatizzato</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #1a1815;"></div><div class="color-info"><div class="color-name">Deep</div><div class="color-values">#1A1815</div><div class="color-use">Titoli principali</div></div></div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Palette Interattiva</h3>
+                <p>Per azioni, link e stati UI senza connotazione semantica. Derivata da Camel, scurita per garantire contrasto WCAG.</p>
+                <div class="color-grid cols-3">
+                    <div class="color-card compact"><div class="color-swatch" style="background: #8b7355;"></div><div class="color-info"><div class="color-name">Camel Dark</div><div class="color-values">#8B7355</div><div class="color-use">Azione primaria, link</div></div></div>
+                    <div class="color-card compact"><div class="color-swatch" style="background: #6b5a45;"></div><div class="color-info"><div class="color-name">Camel Hover</div><div class="color-values">#6B5A45</div><div class="color-use">Hover, visited</div></div></div>
+                    <div class="color-card compact"><div class="color-swatch" style="background: #c4b8a8;"></div><div class="color-info"><div class="color-name">Camel Disabled</div><div class="color-values">#C4B8A8</div><div class="color-use">Stati disabilitati</div></div></div>
+                </div>
+                <div class="spec-box">
+                    <code>Regola Camel: cliccabile → Camel Dark · decorativo → Camel</code>
+                    <code>Focus ring: Camel #A89070, 2px solid, 2px offset</code>
+                    <code>Selezione testo: Fiber #F0EBE3</code>
+                    <code>Highlight: Ambra soft #F7F2E4</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Palette Funzionale</h3>
+                <p>Per stati e feedback semantici. Mantengono temperatura calda.</p>
+                <div class="color-grid cols-4">
+                    <div class="color-card compact"><div class="color-swatch" style="background: #c4705a;"></div><div class="color-info"><div class="color-name">Terracotta</div><div class="color-values">#C4705A</div><div class="color-use">Errore</div></div></div>
+                    <div class="color-card compact"><div class="color-swatch" style="background: #c49c4a;"></div><div class="color-info"><div class="color-name">Ambra</div><div class="color-values">#C49C4A</div><div class="color-use">Warning</div></div></div>
+                    <div class="color-card compact"><div class="color-swatch" style="background: #7a9070;"></div><div class="color-info"><div class="color-name">Salvia</div><div class="color-values">#7A9070</div><div class="color-use">Successo</div></div></div>
+                    <div class="color-card compact"><div class="color-swatch" style="background: #8a8580;"></div><div class="color-info"><div class="color-name">Pietra</div><div class="color-values">#8A8580</div><div class="color-use">Info</div></div></div>
+                </div>
+                <div class="spec-box">
+                    <code>Sfondi soft: Terracotta #F5E6E2 · Ambra #F7F2E4</code>
+                    <code>Sfondi soft: Salvia #EEF3EC · Pietra #F2F1EF</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Semantica e temi</h3>
+                <p>I colori hanno due livelli di naming. Questo documento definisce i <strong>token nominali</strong> — i nomi propri della palette. Un eventuale UI Design System li mapperà a <strong>token semantici</strong> per supportare temi chiaro/scuro.</p>
+                <table class="specs-table">
+                    <thead><tr><th>Livello</th><th>Esempio</th><th>Definito in</th></tr></thead>
+                    <tbody>
+                        <tr><td>Nominale</td><td>--kl-paper, --kl-camel</td><td>Brand System (qui)</td></tr>
+                        <tr><td>Semantico</td><td>--color-background, --color-accent</td><td>UI Design System</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Uso su sfondi scuri</h3>
+                <p>Quando il contesto richiede uno sfondo scuro (slide, footer, copertina alternativa), invertire la gerarchia mantenendo i rapporti di contrasto.</p>
+                <table class="specs-table">
+                    <thead><tr><th>Elemento</th><th>Su sfondo chiaro</th><th>Su sfondo scuro</th></tr></thead>
+                    <tbody>
+                        <tr><td>Sfondo</td><td>Paper</td><td>Deep</td></tr>
+                        <tr><td>Testo principale</td><td>Deep</td><td>Paper</td></tr>
+                        <tr><td>Testo secondario</td><td>Earth</td><td>Cashmere</td></tr>
+                        <tr><td>Accenti</td><td>Camel</td><td>Camel (invariato)</td></tr>
+                        <tr><td>Bordo logo</td><td>Camel</td><td>Cashmere</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>I nomi (Paper, Fiber, Cashmere, Camel, Earth, Deep) creano vocabolario interno coerente. Camel puro (#A89070) è troppo chiaro per azioni cliccabili — Camel Dark garantisce 4.6:1 su Paper.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         05 ACCESSIBILITÀ — NEW in v1.1
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="accessibilita">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte II — Fondamenta / 05</div>
+                <h2 class="page-title">Accessibilità</h2>
+                <p class="page-subtitle">Contrasti WCAG e combinazioni validate</p>
+                <span class="invariance-tag">STABILE</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Principio</h3>
+                <p>Kashmir Lab è elegante <strong>e</strong> accessibile. L'uno non esclude l'altro. Ogni combinazione colore ha un uso appropriato in base al suo contrasto.</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Combinazioni WCAG AA</h3>
+                <p>Contrasto ≥ 4.5:1 per testo normale. Uso libero per contenuti informativi.</p>
+                <table class="contrast-table">
+                    <thead><tr><th>Testo</th><th>Sfondo</th><th>Contrasto</th><th>Uso</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="swatch" style="background: #1a1815;"></span>Deep</td>
+                            <td><span class="swatch" style="background: #faf8f5; border: 1px solid #ddd;"></span>Paper</td>
+                            <td class="ratio pass">15.2:1 ✓</td>
+                            <td>Titoli, body principale</td>
+                        </tr>
+                        <tr>
+                            <td><span class="swatch" style="background: #5c5044;"></span>Earth</td>
+                            <td><span class="swatch" style="background: #faf8f5; border: 1px solid #ddd;"></span>Paper</td>
+                            <td class="ratio pass">7.1:1 ✓</td>
+                            <td>Testo secondario, enfasi</td>
+                        </tr>
+                        <tr>
+                            <td><span class="swatch" style="background: #8b7355;"></span>Camel Dark</td>
+                            <td><span class="swatch" style="background: #faf8f5; border: 1px solid #ddd;"></span>Paper</td>
+                            <td class="ratio pass">4.6:1 ✓</td>
+                            <td>Link, azioni, pulsanti</td>
+                        </tr>
+                        <tr>
+                            <td><span class="swatch" style="background: #1a1815;"></span>Deep</td>
+                            <td><span class="swatch" style="background: #f0ebe3;"></span>Fiber</td>
+                            <td class="ratio pass">13.8:1 ✓</td>
+                            <td>Testo su card, box</td>
+                        </tr>
+                        <tr>
+                            <td><span class="swatch" style="background: #d4c4ae;"></span>Cashmere</td>
+                            <td><span class="swatch" style="background: #1a1815;"></span>Deep</td>
+                            <td class="ratio pass">8.4:1 ✓</td>
+                            <td>Testo chiaro su scuro</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Combinazioni solo decorative</h3>
+                <p>Contrasto &lt; 4.5:1. <strong>Mai per testo informativo.</strong></p>
+                <table class="contrast-table">
+                    <thead><tr><th>Elemento</th><th>Sfondo</th><th>Contrasto</th><th>Uso ammesso</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="swatch" style="background: #a89070;"></span>Camel</td>
+                            <td><span class="swatch" style="background: #faf8f5; border: 1px solid #ddd;"></span>Paper</td>
+                            <td class="ratio warn">3.2:1 ⚠</td>
+                            <td>Bordi, icone ≥24px, label decorative</td>
+                        </tr>
+                        <tr>
+                            <td><span class="swatch" style="background: #d4c4ae;"></span>Cashmere</td>
+                            <td><span class="swatch" style="background: #faf8f5; border: 1px solid #ddd;"></span>Paper</td>
+                            <td class="ratio warn">1.9:1 ⚠</td>
+                            <td>Pattern, divisori, sfondi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Regole operative</h3>
+                <div class="spec-box">
+                    <code>Testo &lt;18px: solo combinazioni AA (≥4.5:1)</code>
+                    <code>Testo ≥18px bold o ≥24px: AA Large (≥3:1) ammesso</code>
+                    <code>Icone funzionali: minimo 3:1</code>
+                    <code>Icone decorative: nessun requisito</code>
+                    <code>Focus ring: sempre visibile, 2px minimo</code>
+                    <code>Mai disabilitare zoom utente</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Focus states</h3>
+                <p>L'indicatore di focus deve essere sempre visibile. Mai rimuovere il focus — se il default del browser non è estetico, sostituirlo.</p>
+                <div class="spec-box">
+                    <code>Outline: 2px solid var(--kl-camel)</code>
+                    <code>Offset: 2px</code>
+                    <code>Border-radius: var(--radius-sm)</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Alt text</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Tipo immagine</th><th>Alt text</th></tr></thead>
+                    <tbody>
+                        <tr><td>Decorativa (pattern, angoli)</td><td>Vuoto: alt=""</td></tr>
+                        <tr><td>Logo</td><td>"Kashmir Lab"</td></tr>
+                        <tr><td>Informativa</td><td>Descrivi il significato, non l'aspetto</td></tr>
+                        <tr><td>Funzionale (icona-bottone)</td><td>Descrivi l'azione: "Scarica", "Chiudi"</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>L'eleganza visiva di Camel e Cashmere si preserva usandoli dove il contrasto non è critico (bordi, pattern, decorazioni). Il testo informativo usa sempre Earth, Deep o Camel Dark.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         06 RITMO VISIVO
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="ritmo">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte II — Fondamenta / 06</div>
+                <h2 class="page-title">Ritmo Visivo</h2>
+                <p class="page-subtitle">Tipografia fluida, spaziature, design tokens</p>
+                <span class="invariance-tag">STABILE (font) · ADATTABILE (scale)</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Il framework: Soft Minimalism</h3>
+                <p>Kashmir Lab adotta il <strong>Soft Minimalism</strong> — la filosofia di design codificata da Norm Architects e Kinfolk:</p>
+                <p style="font-family: 'Fraunces', serif; font-size: var(--type-h2); font-style: italic; color: var(--kl-earth); margin: var(--space-3) 0; line-height: 1.4;">"Richness focused by restraint, simplicity imbued with warmth, complexity heightened by order."</p>
+                <p>Tradotto: ricchezza concentrata, semplicità calda, complessità ordinata. Non minimalismo sterile. Non corporate freddo. <strong>Precisione tecnica con calore umano.</strong></p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">I tre font — Funzione e forma</h3>
+                <p>Tre voci. Una temperatura. Ognuna con un ruolo preciso nel costruire l'identità Kashmir Lab.</p>
+                
+                <div class="type-sample">
+                    <div class="type-sample-header"><span class="type-name">Fraunces</span><span class="type-specs">Display · Riconoscibilità</span></div>
+                    <div class="type-display fraunces display-size">Architecture Brief</div>
+                    <div class="type-display fraunces-italic h2-size">Infrastructure & Design</div>
+                    <div class="type-use"><strong>Il carattere — la firma visiva.</strong> È il font che qualcuno ricorda dopo aver visto un nostro documento. Porta l'intera dimensione "artigianale" del brand — gli altri font gli fanno spazio. Fraunces ha curve "imperfette" (il designer le chiama <em>wonky</em>) che danno vita alla lettera — come le piccole variazioni in un tessuto fatto a mano.</div>
+                </div>
+                
+                <table class="specs-table">
+                    <thead><tr><th>Alternativa</th><th>Problema per Kashmir Lab</th></tr></thead>
+                    <tbody>
+                        <tr><td>Playfair Display</td><td>Alto contrasto, troppo editoriale — sembra una rivista</td></tr>
+                        <tr><td>Libre Baskerville</td><td>Classico ma anonimo — sembra un documento legale</td></tr>
+                        <tr><td>Cormorant</td><td>Elegante ma fragile — sembra poesia, non consulenza</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="type-sample">
+                    <div class="type-sample-header"><span class="type-name">Instrument Sans</span><span class="type-specs">Body + UI · Calore</span></div>
+                    <div class="type-display instrument label-size">TECHNICAL DOCUMENT — Q1 2026</div>
+                    <div class="type-display instrument body-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Precisione con calore.</div>
+                    <div class="type-use"><strong>Il calore — ovunque ma invisibile.</strong> Fa il lavoro silenzioso di rendere tutto leggibile, mantenendo temperatura calda. È un neo-grotesque con DNA umanista: la pulizia di un sans-serif moderno, ma proporzioni derivate dalla calligrafia. Aperture ampie nella "a", "e", "s" — migliore leggibilità anche a 11px.</div>
+                </div>
+                
+                <table class="specs-table">
+                    <thead><tr><th>Alternativa</th><th>Problema per Kashmir Lab</th></tr></thead>
+                    <tbody>
+                        <tr><td>Helvetica</td><td>Neutro fino all'anonimato — nessun calore</td></tr>
+                        <tr><td>Inter</td><td>Ottimizzato per UI, troppo tecnico — sembra un'app</td></tr>
+                        <tr><td>Circular</td><td>Geometric trendy — sembra una startup 2018</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="type-sample">
+                    <div class="type-sample-header"><span class="type-name">DM Mono</span><span class="type-specs">Code · Autorevolezza tecnica</span></div>
+                    <div class="type-display mono code-size">const kashmirLab = { philosophy: "soft-minimalism" };</div>
+                    <div class="type-use"><strong>La competenza — il tecnico credibile.</strong> Per una consulenza IT, il codice non è decorazione — è sostanza. DM Mono ha terminali morbidi (le estremità non sono tagliate nette) e proporzioni generose. Distinzione chiara 0/O/l/1 senza slash o punti — scelte che urlerebbero "font da terminale".</div>
+                </div>
+                
+                <table class="specs-table">
+                    <thead><tr><th>Alternativa</th><th>Problema per Kashmir Lab</th></tr></thead>
+                    <tbody>
+                        <tr><td>Fira Mono</td><td>Troppo stretto e denso — affatica</td></tr>
+                        <tr><td>JetBrains Mono</td><td>Ottimo per IDE, ma grida "programmatore"</td></tr>
+                        <tr><td>SF Mono</td><td>Freddo, Apple-centrico</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Perché tre font</h4>
+                <p>Un font in più significa: più peso da caricare, più regole da documentare, più decisioni da prendere, più possibilità di incoerenza. Il sistema funziona perché ogni font ha un ruolo esclusivo: Fraunces porta <strong>riconoscibilità</strong>, Instrument Sans porta <strong>calore</strong>, DM Mono porta <strong>autorevolezza tecnica</strong>. Insieme costruiscono un'identità artigianale, accessibile, e tecnicamente credibile.</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Scala tipografica fluida</h3>
+                <p>Una scala coerente costruita su <strong>ratio 1.2 (Minor Third)</strong> — ogni gradino è 1.2× il precedente. Base: 14px.</p>
+                
+                <!-- Type Scale Visualization -->
+                <div class="type-scale-visual">
+                    <div class="scale-header">
+                        <span class="scale-ratio">Ratio 1.2 — Minor Third</span>
+                        <span class="scale-formula">size = base × 1.2<sup>n</sup></span>
+                    </div>
+                    <div class="scale-ladder">
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Fraunces', serif; font-size: 2.618rem; line-height: 1.2;">Display XL</span>
+                            <span class="scale-info"><code>2.618rem</code> ~42px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Fraunces', serif; font-size: 2.177rem; line-height: 1.2;">Display</span>
+                            <span class="scale-info"><code>2.177rem</code> ~35px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Fraunces', serif; font-size: 1.814rem; line-height: 1.2;">Heading 1</span>
+                            <span class="scale-info"><code>1.814rem</code> ~29px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Fraunces', serif; font-size: 1.512rem; line-height: 1.2;">Heading 2</span>
+                            <span class="scale-info"><code>1.512rem</code> ~24px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Fraunces', serif; font-size: 1.26rem; line-height: 1.2;">Heading 3</span>
+                            <span class="scale-info"><code>1.26rem</code> ~20px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Instrument Sans', sans-serif; font-size: 1.05rem; font-weight: 500; line-height: 1.2;">Heading 4</span>
+                            <span class="scale-info"><code>1.05rem</code> ~17px</span>
+                        </div>
+                        <div class="scale-step active">
+                            <span class="scale-sample" style="font-family: 'Instrument Sans', sans-serif; font-size: 0.875rem;">Body — base unit</span>
+                            <span class="scale-info"><code>0.875rem</code> 14px ←</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'Instrument Sans', sans-serif; font-size: 0.729rem; text-transform: uppercase; letter-spacing: 0.1em;">Label / Eyebrow</span>
+                            <span class="scale-info"><code>0.729rem</code> ~12px</span>
+                        </div>
+                        <div class="scale-step">
+                            <span class="scale-sample" style="font-family: 'DM Mono', monospace; font-size: 0.608rem;">Micro / Caption</span>
+                            <span class="scale-info"><code>0.608rem</code> ~10px</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="code-block">
+:root {
+  <span class="comment">/* Font stack */</span>
+  --font-display: <span class="highlight">'Fraunces', Georgia, serif</span>;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'SF Mono', Consolas, monospace;
+  
+  <span class="comment">/* Fluid type scale — min @ 375px, max @ 1200px */</span>
+  --type-display-xl: clamp(3rem, 8vw, 5.5rem);
+  --type-display-lg: clamp(2rem, 5vw, 3.5rem);
+  --type-display-md: clamp(1.5rem, 3vw, 2rem);
+  --type-body-lg: 1.125rem;
+  --type-body: 1rem;
+  --type-body-sm: 0.875rem;
+  --type-ui: 0.6875rem;
+  --type-mono: 0.8125rem;
+  
+  <span class="comment">/* Line heights — Soft Minimalism tende alla leggerezza */</span>
+  --lh-tight: 1.2;    <span class="comment">/* Titoli */</span>
+  --lh-normal: 1.75;  <span class="comment">/* Body — più aria verticale */</span>
+}
+                </div>
+                <div class="spec-box">
+                    <code>Body text: 16px minimo, line-height 1.75, letter-spacing 0.01em</code>
+                    <code>Max larghezza riga: 65ch (leggibilità ottimale)</code>
+                    <code>UI label: 11px, uppercase, letter-spacing 0.08em, peso 500</code>
+                    <code>Code: 13px, line-height 1.6</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Spaziature</h3>
+                <p>Scala basata su <strong>8px</strong>. Elementi correlati = spaziatura minore; separati = maggiore.</p>
+                <div class="spacing-scale">
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 4px;"></div><div class="spacing-label">1</div><div class="spacing-value">4px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 8px;"></div><div class="spacing-label">2</div><div class="spacing-value">8px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 16px;"></div><div class="spacing-label">3</div><div class="spacing-value">16px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 24px;"></div><div class="spacing-label">4</div><div class="spacing-value">24px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 32px;"></div><div class="spacing-label">5</div><div class="spacing-value">32px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 48px;"></div><div class="spacing-label">6</div><div class="spacing-value">48px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 64px;"></div><div class="spacing-label">7</div><div class="spacing-value">64px</div></div>
+                    <div class="spacing-item"><div class="spacing-bar" style="height: 80px;"></div><div class="spacing-label">8</div><div class="spacing-value">80px</div></div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Design Tokens</h3>
+                <p>I numeri non sono arbitrari. Ogni valore è scelto per <em>sentirsi</em> giusto — come un sarto che sa che 2mm fanno la differenza tra un abito che cade e uno che veste.</p>
+                
+                <div class="tokens-grid">
+                    <div class="token-card">
+                        <h5>Border Radius</h5>
+                        <p style="font-size: 10px; color: #888; margin-bottom: 8px; font-style: italic;">Mai taglienti, mai morbidi. Come gli angoli di un libro rilegato a mano.</p>
+                        <div class="token-row"><span class="token-name">--radius-sm</span><span class="token-value">2px <span class="token-visual radius" style="border-radius: 2px;"></span></span></div>
+                        <div class="token-row"><span class="token-name">--radius-md</span><span class="token-value">3px <span class="token-visual radius" style="border-radius: 3px;"></span></span></div>
+                        <div class="token-row"><span class="token-name">--radius-lg</span><span class="token-value">6px <span class="token-visual radius" style="border-radius: 6px;"></span></span></div>
+                        <div class="token-row"><span class="token-name">--radius-full</span><span class="token-value">50% <span class="token-visual radius" style="border-radius: 50%;"></span></span></div>
+                    </div>
+                    <div class="token-card">
+                        <h5>Shadows</h5>
+                        <p style="font-size: 10px; color: #888; margin-bottom: 8px; font-style: italic;">Ombre di luce naturale, come su carta crema.</p>
+                        <div class="token-row"><span class="token-name">--shadow-sm</span><span class="token-value"><span class="token-visual shadow" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08);"></span></span></div>
+                        <div class="token-row"><span class="token-name">--shadow-md</span><span class="token-value"><span class="token-visual shadow" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></span></span></div>
+                        <div class="token-row"><span class="token-name">--shadow-lg</span><span class="token-value"><span class="token-visual shadow" style="box-shadow: 0 8px 30px rgba(0,0,0,0.12);"></span></span></div>
+                    </div>
+                </div>
+                <div class="spec-box">
+                    <code>Radius: 2px (precisione) · 3px (equilibrio) · 6px (accoglienza)</code>
+                    <code>Perché non 4px? È un punto morto — né preciso né morbido</code>
+                    <code>Shadows: solo nero a bassa opacità, mai ombre colorate o blu</code>
+                    <code>Borders: --border-light (fiber) · --border-medium (cashmere)</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         07 ELEMENTI VISIVI
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="visivi">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte II — Fondamenta / 07</div>
+                <h2 class="page-title">Elementi Visivi</h2>
+                <p class="page-subtitle">Icone, fotografia, motion</p>
+                <span class="invariance-tag">STABILE (principi) · ADATTABILE (applicazioni)</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Iconografia</h3>
+                <p>Icone <strong>lineari, sottili, calde</strong>. Coerenti con lo spessore del bordo del Cerchio K.</p>
+                <div class="spec-box">
+                    <code>Stile: outline (linea), non filled</code>
+                    <code>Peso linea: 1.5-2px</code>
+                    <code>Dimensioni: 16px (inline) · 24px (standard) · 32px (feature)</code>
+                    <code>Colore: Camel Dark default, Earth enfasi</code>
+                    <code>Librerie: Lucide, Phosphor, Tabler</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Fotografia</h3>
+                <p>Immagini che evocano <strong>artigianalità, calore, autenticità</strong>.</p>
+                <div class="spec-box">
+                    <code>Temperatura: calda, mai fredda/bluastra</code>
+                    <code>Luce: naturale, morbida</code>
+                    <code>Soggetti: dettagli, mani, texture — non pose corporate</code>
+                    <code>Editing: leggero grain ok, niente filtri</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Motion</h3>
+                <p>Animazioni <strong>sottili, mai appariscenti</strong>. Supportano l'esperienza, non la dominano.</p>
+                <div class="spec-box">
+                    <code>Durata: 120ms (fast) · 200ms (normal) · 300ms (slow)</code>
+                    <code>Easing: cubic-bezier(0.4, 0, 0.2, 1) — ease-out naturale</code>
+                    <code>Mai: bounce, elastic, overshoot</code>
+                </div>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>Ogni elemento passa il "test Kashmir": è artigianale? È preciso? È caldo? Se no, non appartiene.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         08 VOICE
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="voice">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte III — Voce / 08</div>
+                <h2 class="page-title">Voice</h2>
+                <p class="page-subtitle">Personalità verbale di Kashmir Lab</p>
+                <span class="invariance-tag">STABILE (personalità) · ADATTABILE (glossario)</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Chi siamo quando parliamo</h3>
+                <p>La voce è costante — non cambia col contesto. Quattro aggettivi:</p>
+                <div class="personality-grid">
+                    <div class="personality-card"><div class="trait">Chiari</div><div class="not-trait">Non semplicistici</div><div class="description">Spieghiamo concetti complessi in modo accessibile, senza banalizzare.</div></div>
+                    <div class="personality-card"><div class="trait">Competenti</div><div class="not-trait">Non accademici</div><div class="description">Sappiamo di cosa parliamo, ma non lo usiamo per intimidire.</div></div>
+                    <div class="personality-card"><div class="trait">Diretti</div><div class="not-trait">Non bruschi</div><div class="description">Al punto con rispetto. Il tempo del cliente è prezioso.</div></div>
+                    <div class="personality-card"><div class="trait">Caldi</div><div class="not-trait">Non informali</div><div class="description">Umani, non bot. Ma professionisti, non amici al bar.</div></div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Glossario base</h3>
+                <table class="glossary-table">
+                    <thead><tr><th>Usiamo</th><th>Non usiamo</th><th>Perché</th></tr></thead>
+                    <tbody>
+                        <tr><td>Cliente</td><td>User, utente</td><td>Più personale</td></tr>
+                        <tr><td>Progetto</td><td>Engagement</td><td>Italiano, chiaro</td></tr>
+                        <tr><td>Problema</td><td>Issue, bug</td><td>Diretto, onesto</td></tr>
+                        <tr><td>Soluzione</td><td>Fix</td><td>Positivo</td></tr>
+                        <tr><td>Riunione</td><td>Call</td><td>Italiano preferito</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         09 TONE IN CONTEXT
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="tone">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte III — Voce / 09</div>
+                <h2 class="page-title">Tone in Context</h2>
+                <p class="page-subtitle">Come moduliamo in base alla situazione</p>
+                <span class="invariance-tag">FLUIDO</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Lo spettro</h3>
+                <p>La <strong>voce</strong> è costante. Il <strong>tono</strong> si modula.</p>
+                <div class="spec-box">
+                    <code>← Formale ─────────────────────── Informale →</code>
+                    <code>  Contratti   Report   Email   Chat interna</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Esempi</h3>
+                <div class="tone-example">
+                    <div class="tone-example-header">Email primo contatto</div>
+                    <div class="tone-example-content">
+                        <div class="tone-bad">"Gentilissimo Dott. Rossi, con la presente siamo a sottoporre..."</div>
+                        <div class="tone-good">"Buongiorno Marco, grazie per averci contattato. Ho letto la richiesta e credo possiamo aiutarti."</div>
+                    </div>
+                </div>
+                <div class="tone-example">
+                    <div class="tone-example-header">Comunicare un problema</div>
+                    <div class="tone-example-content">
+                        <div class="tone-bad">"A causa di imprevisti, la delivery subirà uno slittamento."</div>
+                        <div class="tone-good">"Il rilascio slitta a martedì. Abbiamo trovato un problema che preferiamo risolvere prima della consegna."</div>
+                    </div>
+                </div>
+                <p style="font-size: 11px; color: #888; margin-top: var(--space-3); font-style: italic;">Il secondo esempio non nasconde il ritardo, ma lo contestualizza. Onestà con contesto.</p>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>Tono freddo = distanza. Troppo informale = mancanza professionalità. Kashmir Lab sta nel mezzo: calore con competenza.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         10 PATTERN LIBRARY — NEW in v1.1
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="patterns">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte III — Voce / 10</div>
+                <h2 class="page-title">Pattern Library</h2>
+                <p class="page-subtitle">Come scriviamo cosa</p>
+                <span class="invariance-tag">FLUIDO</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Titoli documenti</h3>
+                <div class="pattern-example">
+                    <div class="pattern-example-header"><span>Titoli</span><span class="principle">Titolo breve, contesto nel sottotitolo</span></div>
+                    <div class="pattern-example-content">
+                        <div class="tone-bad">"Proposta per la realizzazione di un nuovo sistema di gestione documentale per Acme S.p.A."</div>
+                        <div class="tone-good">"Sistema documentale Acme — Proposta"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Messaggi UI</h3>
+                <div class="pattern-example">
+                    <div class="pattern-example-header"><span>Errori</span><span class="principle">Cosa è successo + cosa fare + via d'uscita</span></div>
+                    <div class="pattern-example-content">
+                        <div class="tone-bad">"Error 500: Internal Server Error. Please contact system administrator."</div>
+                        <div class="tone-bad">"Ops! Qualcosa è andato storto :("</div>
+                        <div class="tone-good">"Non siamo riusciti a salvare. Riprova tra un momento — se il problema persiste, scrivici."</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-example">
+                    <div class="pattern-example-header"><span>Successo</span><span class="principle">Conferma concreta, poi sparisci</span></div>
+                    <div class="pattern-example-content">
+                        <div class="tone-bad">"Operation completed successfully!"</div>
+                        <div class="tone-good">"Salvato."</div>
+                        <div class="tone-good">"Documento inviato a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6904081b0a0629080a040c47001d">[email&#160;protected]</a>"</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-example">
+                    <div class="pattern-example-header"><span>Call to action</span><span class="principle">Verbo che descrive l'azione, non il gesto</span></div>
+                    <div class="pattern-example-content">
+                        <div class="tone-bad">"CLICCA QUI!" · "Submit" · "Invia richiesta"</div>
+                        <div class="tone-good">"Inizia" · "Salva bozza" · "Scarica PDF"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Social</h3>
+                <div class="pattern-example">
+                    <div class="pattern-example-header"><span>Post LinkedIn</span><span class="principle">Storia concreta > annuncio generico</span></div>
+                    <div class="pattern-example-content">
+                        <div class="tone-bad">"🚀 Siamo entusiasti di annunciare che Kashmir Lab ha completato con successo un importante progetto!"</div>
+                        <div class="tone-good">"Tre mesi fa Acme ci ha chiesto di ripensare come i loro tecnici accedono alla documentazione. Ieri abbiamo consegnato. Il sistema vecchio: 6 click. Ora: cerca e trova."</div>
+                    </div>
+                </div>
+                <div class="spec-box">
+                    <code>Niente emoji funzionali (🚀💪✅) · Niente hashtag generici</code>
+                    <code>Numeri concreti > aggettivi</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Glossario esteso UI</h3>
+                <table class="glossary-table">
+                    <thead><tr><th>Usiamo</th><th>Non usiamo</th><th>Note</th></tr></thead>
+                    <tbody>
+                        <tr><td>Salva</td><td>Submit, Invia</td><td>Italiano, specifico</td></tr>
+                        <tr><td>Annulla</td><td>Cancel, Cancella</td><td>"Cancella" implica distruzione</td></tr>
+                        <tr><td>tra poco</td><td>a breve</td><td>Più umano</td></tr>
+                        <tr><td>Non è riuscito</td><td>È fallito</td><td>Meno drammatico</td></tr>
+                        <tr><td>Fatto</td><td>Completato con successo</td><td>Essenziale</td></tr>
+                        <tr><td>Serve una mano?</td><td>Hai bisogno di assistenza?</td><td>Calore</td></tr>
+                        <tr><td>Niente ancora</td><td>Nessun elemento trovato</td><td>Possibilità</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>La voce si impara con i pattern, non con le regole. Questi esempi sono il "campionario" da cui pescare strutture.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         11 SISTEMA DOCUMENTI
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="documenti">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte IV — Applicazione / 11</div>
+                <h2 class="page-title">Sistema Documenti</h2>
+                <p class="page-subtitle">Copertina speciale, interni funzionali</p>
+                <span class="invariance-tag">STABILE</span>
+            </div>
+            
+            <div class="content-section">
+                <p>Sistema a <strong>due livelli</strong>: copertina con impatto, pagine interne funzionali.</p>
+                <div class="doc-system-intro">
+                    <h4>Il flusso visivo</h4>
+                    <div class="system-flow">
+                        <div class="system-box"><div class="box-title">Copertina</div><div class="box-desc">Impatto, tutti gli elementi</div></div>
+                        <span class="system-arrow">→</span>
+                        <div class="system-box"><div class="box-title">Interni</div><div class="box-desc">Leggibilità, essenziali</div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doc-comparison">
+                <div class="doc-column">
+                    <div class="doc-column-label">Copertina</div>
+                    <div class="doc-mockup cover-mockup">
+                        <div class="corner-tl"></div>
+                        <div class="corner-br"></div>
+                        <div class="weave-square"></div>
+                        <div class="mock-eyebrow">Technical Document</div>
+                        <div class="mock-title">Architecture Brief</div>
+                        <div class="mock-subtitle">Infrastructure & Design</div>
+                        <div class="mock-divider"></div>
+                        <div class="mock-meta">Q1 2026</div>
+                        <div class="circle-k">K</div>
+                    </div>
+                    <p class="doc-column-desc"><strong>Tutti gli elementi:</strong> doppio angolo, pattern, K grande centrata.</p>
+                </div>
+                <div class="doc-column">
+                    <div class="doc-column-label">Pagina interna</div>
+                    <div class="doc-mockup internal-mockup">
+                        <div class="corner-tl"></div>
+                        <div class="mock-header">
+                            <div class="mock-eyebrow">Section 01</div>
+                            <div class="mock-title">Overview</div>
+                            <div class="mock-subtitle">Project context</div>
+                        </div>
+                        <div class="mock-content">
+                            <div class="mock-divider"></div>
+                            <div class="mock-section-title">Background</div>
+                            <div class="mock-line" style="width: 100%;"></div>
+                            <div class="mock-line" style="width: 92%;"></div>
+                            <div class="mock-line" style="width: 88%;"></div>
+                            <div class="mock-divider"></div>
+                            <div class="mock-section-title">Objectives</div>
+                            <div class="mock-line" style="width: 100%;"></div>
+                            <div class="mock-line" style="width: 75%;"></div>
+                        </div>
+                        <div class="mock-footer">
+                            <span class="footer-text">Architecture Brief — Page 2</span>
+                            <div class="circle-k">K</div>
+                        </div>
+                    </div>
+                    <p class="doc-column-desc"><strong>Essenziale:</strong> angolo singolo, K piccola in footer.</p>
+                </div>
+            </div>
+            
+            <div class="rationale">
+                <h4>Razionale</h4>
+                <p>La copertina è prima impressione — impatto. Le pagine interne devono essere leggibili. Come un libro con copertina elaborata e pagine pulite.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         12 TEMPLATE E ASSET
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="template">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Parte IV — Applicazione / 12</div>
+                <h2 class="page-title">Template e Asset</h2>
+                <p class="page-subtitle">Naming convention e risorse</p>
+                <span class="invariance-tag">ADATTABILE</span>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Documenti tipo</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Documento</th><th>Descrizione</th><th>Stato</th></tr></thead>
+                    <tbody>
+                        <tr><td>Proposta</td><td>Proposta commerciale</td><td>WIP</td></tr>
+                        <tr><td>Report</td><td>Documentazione, audit</td><td>WIP</td></tr>
+                        <tr><td>Presentazione</td><td>Slide meeting</td><td>WIP</td></tr>
+                        <tr><td>Email Signature</td><td>Firma email</td><td>WIP</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Naming convention</h3>
+                <div class="naming-example">
+                    <span class="comment">// Struttura</span><br>
+                    <span class="highlight">kl</span>_[tipo]_[cliente]_[descrizione]_v[versione].[ext]<br><br>
+                    <span class="comment">// Esempi</span><br>
+                    kl_proposta_acme_redesign-sito_v1.pdf<br>
+                    kl_report_beta_audit-sicurezza_v2.pdf
+                </div>
+                <div class="spec-box">
+                    <code>Prefisso: sempre "kl_" (minuscolo)</code>
+                    <code>Separatori: trattino tra parole, underscore tra sezioni</code>
+                    <code>Versione: v + numero (v1, v2...)</code>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         APPENDICE A — GOVERNANCE
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break" id="governance">
+        <div class="page-content section-page">
+            <div class="corner-tl"></div>
+            <div class="page-header">
+                <div class="page-number">Appendice A</div>
+                <h2 class="page-title">Governance</h2>
+                <p class="page-subtitle">Regole di modifica</p>
+            </div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Owner</h3>
+                <div class="spec-box">
+                    <code>Owner: [Nome responsabile brand]</code>
+                    <code>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59787949b91b59e94869d989c87999497db9c81">[email&#160;protected]</a></code>
+                    <code>Ultimo aggiornamento: Febbraio 2026</code>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Riepilogo invarianza</h3>
+                <table class="specs-table">
+                    <thead><tr><th>Livello</th><th>Elementi</th><th>Modifica</th></tr></thead>
+                    <tbody>
+                        <tr><td>Sacro</td><td>Nome, mission, tagline, valori, K, palette brand</td><td>Mai</td></tr>
+                        <tr><td>Stabile</td><td>Font, elementi firma, voice, target, boilerplate, accessibilità</td><td>Con approvazione</td></tr>
+                        <tr><td>Adattabile</td><td>Palette interattiva/funzionale, tokens, scale</td><td>Documentando</td></tr>
+                        <tr><td>Fluido</td><td>Pattern library, glossario, template</td><td>Liberamente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="rationale">
+                <h4>Nota: Perché i font sono Stable e non Sacred</h4>
+                <p>La palette colori è Sacred perché i valori esadecimali non dipendono da nulla di esterno. I font dipendono da infrastrutture: Google Fonts, licenze, supporto browser. Se in futuro Fraunces venisse deprecato, o emergesse un font che incarna meglio i nostri valori, vogliamo poter evolvere. Un cambio font resta un evento raro e significativo che richiede giustificazione rispetto ai valori, analisi dell'impatto, e approvazione esplicita dell'owner.</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content-section">
+                <h3 class="section-title">Checklist coerenza</h3>
+                <div class="dos">
+                    <h4>Prima di ogni modifica</h4>
+                    <ul>
+                        <li>Rispetta gerarchia di invarianza?</li>
+                        <li>Nuovi valori seguono il sistema?</li>
+                        <li>Nuove sezioni seguono lo schema?</li>
+                        <li>Ha strato narrativo + operativo?</li>
+                        <li>Contrasti accessibili verificati?</li>
+                        <li>Passa il test Kashmir: artigianale, preciso, caldo?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ════════════════════════════════════════════════════════════════
+         CLOSING
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="page page-break">
+        <div class="page-content cover" style="min-height: 50vh;">
+            <div class="corner-tl"></div>
+            <div class="corner-br"></div>
+            <div class="cover-content">
+                <div class="cover-divider" style="margin-bottom: var(--space-4);"></div>
+                <p class="closing-quote">Anima nella tecnologia.</p>
+                <p class="closing-signature">Kashmir Lab</p>
+                <div class="cover-divider" style="margin-top: var(--space-4);"></div>
+            </div>
+            <div class="circle-k">K</div>
+        </div>
+    </div>
+
+</body>
+</html>
