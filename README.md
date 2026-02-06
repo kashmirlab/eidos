@@ -51,5 +51,5 @@ docs/
 ---
 
 <p align="center">
-  <sub><em>Kashmir Lab</em></sub>
+  <em>Kashmir Lab</em>
 </p>
