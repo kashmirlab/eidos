@@ -49,7 +49,3 @@ docs/
 > _Richness focused by restraint, simplicity imbued with warmth. Soft Minimalism._
 
 ---
-
-<p align="center">
-  <em>Kashmir Lab</em>
-</p>
