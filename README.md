@@ -22,16 +22,12 @@
 Visual and verbal identity of Kashmir Lab.
 This repository hosts the brand system — served as static pages via GitHub Pages.
 
-<br>
-
 ### Pages
 
 |                                                             |                                                     |
 | :---------------------------------------------------------- | :-------------------------------------------------- |
 | **[Identity](https://kashmirlab.github.io/eidos/identity)** | Brand codex — chi siamo, come ci esprimiamo, perché |
 | **[Logos](https://kashmirlab.github.io/eidos/logos)**       | Marchio, varianti, formati, regole d'uso            |
-
-<br>
 
 ### Structure
 
@@ -48,13 +44,9 @@ docs/
         └── wordmark/
 ```
 
-<br>
-
 ### Framework
 
 > _Richness focused by restraint, simplicity imbued with warmth. Soft Minimalism._
-
-<br>
 
 ---
 
